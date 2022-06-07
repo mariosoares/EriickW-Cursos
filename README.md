@@ -56,3 +56,19 @@
 
 
 ## Tipos de dados 
+
+
+ - **String** 
+- [Pasta dos exemplos de strings](/strings)
+    - Cadeia de caracteres Ex : ABC
+    - Para mostrar ou identificar uma string:
+        - "" aspas duplas
+        - '' aspas simples
+        - ´´ template literals ou template string
+
+- **number**
+    - números
+        - 33 (numeros inteiros)
+        - 12.5 (numeros reais - float)
+        - NaN (Not a Number)
+        - Infinity (infinito)
