@@ -44,6 +44,8 @@
 
 **Comentários**
 - no Javascricpt e em outras linguagens de programação um comentário serve para deixar observações ou alguma coisa que você queira 
+
+
     ```js
       // Usando "//" você cria um comentário em linha 
      ```
@@ -59,23 +61,75 @@
 
 
  - **String** 
-- [Pasta dos exemplos de strings](/strings)
+- [Pasta dos exemplos de strings](Tipos_de_dados/strings)
     - Cadeia de caracteres Ex : ABC
     - Para mostrar ou identificar uma string:
         - "" aspas duplas
         - '' aspas simples
         - ´´ template literals ou template string
 
+        <br>
+
+
 - **number**
-- [Pasta dos exemplos de numbers](/numbers)
+- [Pasta dos exemplos de numbers](Tipos_de_dados/numbers)
     - números
     
         - 33 (numeros inteiros)
         - 12.5 (numeros reais - float)
         - NaN (Not a Number - não é um número)
         - Infinity (infinito)
+
+        <br>
+
 - **Boolean**
+- [Pasta dos exemplos de boolean](Tipos_de_dados/boolean)
     - Somente 2 valores
         - true // verdadeiro
         - false // falso
- 
+
+    ```js
+    console.log(true)
+    console.log(false)
+    ```
+<br>
+
+- **undefined**
+    - indefinido
+
+<br>
+
+- **null**
+    - nulo
+    - objeto que não possui nada dentro
+    - diferente de indefinido
+
+<br>
+
+- **Object**
+    - Objeto
+    - Propriedades / atributos
+    - Funcionalidades / métodos
+    - {propriedade: "valor"}
+    - dado estrutural
+
+    <br>
+
+    ```js
+    console.log({
+        name: "Erick",
+        idade: 18,
+    })
+    ```
+
+    <br>
+
+- **Array**
+    - Ele funcina como uma lista
+    - Ele agrupa dados
+
+    <br>
+
+    ```js
+    console.log(["Erick , 18"])
+    ```
