@@ -67,8 +67,15 @@
         - ´´ template literals ou template string
 
 - **number**
+- [Pasta dos exemplos de numbers](/numbers)
     - números
+    
         - 33 (numeros inteiros)
         - 12.5 (numeros reais - float)
-        - NaN (Not a Number)
+        - NaN (Not a Number - não é um número)
         - Infinity (infinito)
+- **Boolean**
+    - Somente 2 valores
+        - true // verdadeiro
+        - false // falso
+ 
