@@ -133,3 +133,61 @@
     ```js
     console.log(["Erick , 18"])
     ```
+
+    <br>
+
+## Variáveis
+- São nomes simbólicos para receber algum valor
+- atalhos de código 
+- Identificadores
+- 3 palavras reservadas para criar uma variável
+    - var
+    - let
+    - const
+
+       <br>
+
+    ```js
+        var numero = 1; //forma mais antiga de indicar uma variavel
+
+        let clima = "quente"; // forma mais atual de indicar uma variavel
+
+        const nome = "Erick"; //o const é uma forma de indicar uma constante ou seja não pode ser alterada durante a execução do código
+
+        console.log(numero +" "+clima+" "+nome) // saida: 1 quente Erick
+    ```
+
+    <br>
+
+- O JS é uma linguagem fracamente tipada e dinâmica
+- ou seja variáveis não precisam ter um tipo previamente definido
+- Podemos mudar o conteúdo da variável
+
+### **Scope**
+- O scope(escopo) determina a visibilidade de alguma variável no JS
+####  **Block statement (Declaração de bloco)**
+
+<br>
+
+```js
+//Vamos iniciar um bloco
+{
+    // aqui dentro é um bloco e posso colocar qualquer código
+
+} // aqui dechamos o bloco
+```
+- O bloco , també criará um novo escopo. Chamamos de `block-scoped`
+
+### **var**
+
+```js
+// var é global e poderá funcionar fora de um escopo de bloco
+
+console.log('> existe x antes do bloco? ', x);
+
+{
+    var x = 0;
+}
+console.log('> existe x depois do bloco? ', x);
+
+```
