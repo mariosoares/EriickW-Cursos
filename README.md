@@ -181,7 +181,7 @@
 ### **var**
 
 ```js
-// var é global e poderá funcionar fora de um escopo de bloco
+// var é global e poderá funcionar fora de um escopo de bloco ou seja acontece o hoisting onde o JavaScript leva o var x para o começo do programa
 
 console.log('> existe x antes do bloco? ', x);
 
@@ -191,3 +191,42 @@ console.log('> existe x antes do bloco? ', x);
 console.log('> existe x depois do bloco? ', x);
 
 ```
+
+### **let**
+
+```js
+// const e let são locais e só funcinam no escopo onde foram criadas
+
+
+console.log('> existe x antes do bloco? ', x);
+
+{
+    let x = 0;
+    console.log('> existe x dentro do bloco? ', x);
+}
+
+console.log('> existe x depois do bloco? ', x);
+```
+
+### **const**
+- Funciona da mesma forma que o let entretanto o valor atribuido a ele não pode ser alterado durante a aplicação
+
+## **Nomeando variáveis**
+
+* JS é case-sensitive (sensível ao caso)
+* JS aceita a cadeia de caracteres Unicode
+
+- Posso:
+    * Iniciar com esses caracteres especiais: $ _
+    * Iniciar com letras
+    * Colocar acentos 
+    * Letras maíusculas e minúsculas fazem diferença
+- Não posso:
+    * Iniciar com números 
+    * Colocar espaços vazios no nome 
+- Ideal
+    * Criar nomes que fazem sentido 
+    * De preferencia um nome que explique o que a variável é ou faz
+    * camelCase(usar letras maisuculas para cada troca de palavra ex: meuNome)
+    * snake_case
+    * Escrever em inglês
