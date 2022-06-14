@@ -1,4 +1,4 @@
-# JavaScript Core
+# ***JavaScript Core***
 
  - Linguagem de programação que roda no navegador do usuário (front-end)
     - Se você cilcar em algum botão da página e aparece uma janela. Isso é o JavaScript
@@ -99,14 +99,14 @@
 
 <br>
 
-- **null**
+- ***null***
     - nulo
     - objeto que não possui nada dentro
     - diferente de indefinido
 
 <br>
 
-- **Object**
+- ***Object***
     - Objeto
     - Propriedades / atributos
     - Funcionalidades / métodos
@@ -124,7 +124,7 @@
 
     <br>
 
-- **Array**
+- ***Array***
     - Ele funcina como uma lista
     - Ele agrupa dados
 
@@ -136,7 +136,7 @@
 
     <br>
 
-## Variáveis
+## ***Variáveis***
 - São nomes simbólicos para receber algum valor
 - atalhos de código 
 - Identificadores
@@ -154,7 +154,7 @@
 
         const nome = "Erick"; //o const é uma forma de indicar uma constante ou seja não pode ser alterada durante a execução do código
 
-        console.log(numero +" "+clima+" "+nome) // saida: 1 quente Erick
+        console.log(`${numero} ${clima} ${nome}`) // saida: 1 quente Erick
     ```
 
     <br>
@@ -163,9 +163,9 @@
 - ou seja variáveis não precisam ter um tipo previamente definido
 - Podemos mudar o conteúdo da variável
 
-### **Scope**
+### ***Scope***
 - O scope(escopo) determina a visibilidade de alguma variável no JS
-####  **Block statement (Declaração de bloco)**
+####  ***Block statement (Declaração de bloco)***
 
 <br>
 
@@ -178,7 +178,7 @@
 ```
 - O bloco , també criará um novo escopo. Chamamos de `block-scoped`
 
-### **var**
+### ***var***
 
 ```js
 // var é global e poderá funcionar fora de um escopo de bloco ou seja acontece o hoisting onde o JavaScript leva o var x para o começo do programa
@@ -192,7 +192,7 @@ console.log('> existe x depois do bloco? ', x);
 
 ```
 
-### **let**
+### ***let***
 
 ```js
 // const e let são locais e só funcinam no escopo onde foram criadas
@@ -208,25 +208,185 @@ console.log('> existe x antes do bloco? ', x);
 console.log('> existe x depois do bloco? ', x);
 ```
 
-### **const**
+### ***const***
 - Funciona da mesma forma que o let entretanto o valor atribuido a ele não pode ser alterado durante a aplicação
 
-## **Nomeando variáveis**
+## ***Nomeando variáveis***
 
 * JS é case-sensitive (sensível ao caso)
 * JS aceita a cadeia de caracteres Unicode
 
-- Posso:
+- ***Posso:***
     * Iniciar com esses caracteres especiais: $ _
     * Iniciar com letras
     * Colocar acentos 
     * Letras maíusculas e minúsculas fazem diferença
-- Não posso:
+- ***Não posso:***
     * Iniciar com números 
     * Colocar espaços vazios no nome 
-- Ideal
+- ***Ideal***
     * Criar nomes que fazem sentido 
     * De preferencia um nome que explique o que a variável é ou faz
     * camelCase(usar letras maisuculas para cada troca de palavra ex: meuNome)
     * snake_case
     * Escrever em inglês
+- statement (declaração)
+
+## ***Functions***
+- As functions possuem duas finalidades 
+    - Explicar o que um trecho de código faz 
+    - Repetir esse trecho de codigo diversas vezes sem precisar copiar e colar
+- Ela é um tipo de dado estrutural 
+
+```js
+function frase(){
+    console.log("Bom dia");
+    console.log("Boa Tarde");
+    console.log("Boa noite");
+}
+frase();
+
+/* Saída:
+
+Bom dia
+Boa Tarde
+Boa noite
+*/
+```
+### ***Argumentos e parâmetros :***
+```js
+//Função anonima , function expression, é quando você atribui o uma função a uma variavel sem colocar o nome da função
+
+//num1 e num2 são parâmetors da função, servem como "variaveis" dentro da função onde quando a função for chamada os valores podem ser passados em forma de argumentos
+
+const sum = function(num1,num2){
+  console.log(num1+num2)
+}
+sum(2,3)// Arguments - Argumentos 
+```
+<br>
+
+
+### ***Retornando valores dentro da função :***
+
+```js
+// Outra forma de retornar dados de uma função (de forma mais eficiente) é necessário usar o "return", e logo após dele colocar o dado que deve ser retornado no caso mostrado ao chamar a função
+const sum = function(num1,num2){
+  let total = num1+num2;
+  return total
+}
+
+let number1= 30;
+let number2=40;
+console.log(`O numero 1 é ${number1}`);
+console.log(`O numero 2 é ${number2}`)
+console.log(`A soma entre eles é ${sum(number1,number2)}`)
+```
+
+<br>
+
+### ***Function Scope :***
+```js
+
+let subject = 'create video';
+
+
+// O valor de uma variável pode ser alterado dentro de uma função entretanto o valor que foi colocado na variável que está sendo usado como argumento so vai existir dentro do escopo da função, ou seja fora dela a variável continua com seu valor anterior   
+function createThink(subject){
+  subject='study'
+  return subject;
+  
+}
+console.log(subject);
+console.log(createThink(subject))
+
+/* Saida:
+
+create video
+study
+
+*/
+```
+
+<br>
+
+### ***Function hoisting :***
+```js
+sayMyName()
+
+// No JavaScript (e outras linguagens de programação) as funções que são chamadas antes recebem um hoisting que siginifica "elevação" ou seja quando o programa iniciar ele vai "jogar" a função pra cima de todo o código fazemdo com que essa opção de chamar a função antes seja possivel
+function sayMyName(){
+  console.log("Erick")
+}
+```
+- Casos onde a função não sofre elevação
+```js
+sayMyName()
+
+// Quando é escrita em forma de expressão ela não será elevada ou seja todas as alternativas de escrver uma função abaixo irão dar erro
+
+const sayMyName = function sayMyName(){
+  console.log("Erick")
+}
+
+var sayMyName = function sayMyName(){
+  console.log("Erick")
+}
+let sayMyName = function sayMyName(){
+  console.log("Erick")
+}
+```
+
+<br>
+
+### ***Arrow Function :***
+- Maneira mais moderna e compacta de escrever uma função
+
+```js
+
+//Geralmente é usado o const para fazer uma arrow function mas não é obrigatório pode usar outros modos de declarar variáveis
+
+const sayMyName = () => {
+  console.log('Erick')
+}
+
+sayMyName()
+```
+
+### ***callback function :***
+- É uma função que recebe uma função como parâmetro ou uma função que serve de parâmetro para outra função (as duas são a mesma coisa , rs)
+
+```js
+
+function sayMyName (name) {
+  console.log('Antes de executar a funcao callback');
+
+  name();
+
+  console.log('Despois de executar a função callback')
+}
+
+
+sayMyName(
+    () =>{
+        console.log('Estou em uma callback');
+    }
+
+);
+```
+
+<br>
+
+### ***Funções Construtoras :***
+
+```js
+//Funciona como um objeto usando a palavra chave "new" você cria o objeto, para criar "Caracteristicas" basta usar a palavra chave "this"
+
+function Person(name){
+  this.name = name
+} 
+
+const erick = new Person("Erick");
+
+console.log(erick)
+```
