@@ -423,7 +423,9 @@ console.log(String(number).length)
 // Transforamr um número quebrado com duas casas decimais e trocar ponto por vírgula
 
 let number = 473838.373838;
-// O .toFixed serve para colocar um limite de números após a vírgula, ela é uma função atrelada ao objeto number, quando uma função é atrelada ao um objeto chamamos de método, e dentro dos parentese ele espera a quantidade de números após a vírgula o retorno disso será uma string
+/* O .toFixed serve para colocar um limite de números após a vírgula, ela é uma função atrelada ao objeto number,
+ quando uma função é atrelada ao um objeto chamamos de método, 
+ e dentro dos parentese ele espera a quantidade de números após a vírgula o retorno disso será uma string*/
 console.log(number.toFixed(2).replace(".",","))
 
 // Para trocar o ponto por virgula basta usar o .replace("O que você quer trocar"  ,  "O que vc que colocar no lugar")
