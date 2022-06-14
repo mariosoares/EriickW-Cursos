@@ -390,3 +390,41 @@ const erick = new Person("Erick");
 
 console.log(erick)
 ```
+
+## ***Manipulando dados***
+
+### ***Type conversion coersion***
+ - Alteração de um tipo de dado
+ - **Type conversion ( typecasting )** : Altera explicitamente um tipo de dado para o outro
+ - **Type coersion** : É quando o JavaScript altera impicitamente
+ ```js
+ // O Javascript quando ele se depara com esse código ele vai coverter o 5 em uma string para que o programa não apresente erros, ou seja, em vez de somar ele vai concatenar as duas string
+console.log('9'+ 5)
+// Saída:  95
+
+// Aqui você esta alterando o valor string em número ou seja o '9' vai valer 9 ou seja a soma irá ser feita corretamente
+console.log(Number('9') + 5)
+//Saída: 14
+```
+
+```js
+// Contar quantos caracteres tem uma palavra e quantos digitios tem um número
+let word = "Paralelepipedo";
+console.log(word.length);
+
+// Dados de tipo number não recebem o .length ou seja para mostrar quantos caracteres ele possui precisa transforma-lo em string
+let number =1234;
+console.log(String(number).length)
+```
+
+### ***Manipulando Strings e Números***
+
+```js
+// Transforamr um número quebrado com duas casas decimais e trocar ponto por vírgula
+
+let number = 473838.373838;
+// O .toFixed serve para colocar um limite de números após a vírgula, ela é uma função atrelada ao objeto number, quando uma função é atrelada ao um objeto chamamos de método, e dentro dos parentese ele espera a quantidade de números após a vírgula o retorno disso será uma string
+console.log(number.toFixed(2).replace(".",","))
+
+// Para trocar o ponto por virgula basta usar o .replace("O que você quer trocar"  ,  "O que vc que colocar no lugar")
+```
