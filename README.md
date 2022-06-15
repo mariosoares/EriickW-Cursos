@@ -430,3 +430,108 @@ console.log(number.toFixed(2).replace(".",","))
 
 // Para trocar o ponto por virgula basta usar o .replace("O que você quer trocar"  ,  "O que vc que colocar no lugar")
 ```
+<br>
+
+```js
+// Transforme letras minúsculas em maiúsculas. Faça o contrario disso também
+
+
+let word = "Olá mundo";
+//Maiúsculas
+console.log(word.toUpperCase())//Tudo em JS é um objeto ou seja a variavel word é um objeto que recebe o metodo .toUpperCase e esse metodo so funciona com strings
+
+//Minúsculas
+console.log(word.toLowerCase())
+
+```
+<br>
+
+```js
+// Verificar se o texto contém a palavra Programar
+
+let phrase = "Eu gosto de ler"
+
+// O metodo .includes funciona para verificar se tem ou não dentro da frase o que foi colocado detro do parenteses  
+console.log(phrase.includes("Programar"))
+
+// Observação: o .includes é case sensitive ou seja maiúsculas e minúsculas fazem diferença se colocar na frase programar em minúsculas o programa da erro
+
+```
+
+<br>
+
+## Manipulando Strings e Arrays
+```js
+// Separe um texto que contem espaços, em um novo array onde cada texto é uma posição do array. Depois disso, transforme o array em um texto e onde eram espaços, coloque _
+
+let phrase = "Eu gosto de programar"
+
+//O metodo .split recebe como argumento um caractere que apartir dele a frase será dividida e colocada em um array
+let myArray = phrase.split(" ")
+
+// O metodo .join serve para unir arrays e dentro do parenteses fica qual será o separador
+let phraseWithUnderscore = myArray.join("_")
+console.log(phraseWithUnderscore )
+
+```
+
+<br>
+
+```js
+// Contar elementos de um array
+
+let array =[2,4,5,5,6,7]
+
+console.log(array.length)
+```
+
+<br>
+
+```js
+// Transformar uma cadeia de caracteres em elemntos de um array
+
+let word = "Manipulação"
+// Array é um objeto disponivel de forma global no código e o metodo .from espera receber como argumento uma string 
+console.log(Array.from(word))
+```
+
+<br>
+
+```js
+// Manipulando Arrays
+
+let techs = ["html","css","js"]
+
+// Adicionar um item no fim
+//O metodo .push identifica qual é o ultimo item do array e adiciona o que foi colocado como argumento dentro dos parenteses
+techs.push("node.js")
+
+// Adicionar no começo
+// Funciona da do meio inverso ao do push
+techs.unshift("sql")
+
+//Remover do fim
+// Basta apenas colocar o metodo .pop() que ele simplesmente retira o ultimo item do array
+techs.pop()
+
+// Remover do começo
+// Basta apenas colocar o metodo .shift()  que ele retira um item do começo
+techs.shift()
+
+// Pegar somente alguns elementos do array
+// Usando o .slice() você meio que "corta" e mostra somente de qual posição ate qual posição você quer ver
+
+//console.log(techs.slice(1,3))
+
+// Remover 1 ou mais items em qualquer posição do array
+// o metodo .splice(qual posição no array, quantidade de items a serem retirados) serve para retirar 1 ou mais itens de um array
+
+//techs.splice(1,2)
+
+// Encontrar a posição de um elemento no array
+// O metodo .indexOf() serve para procurar qual a posição do item dado como parametro dentro do array e o valor que será encotrado sera colocado na variavel index
+let index = techs.indexOf('css')
+
+console.log(index)
+
+```
