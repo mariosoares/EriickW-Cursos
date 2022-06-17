@@ -539,8 +539,35 @@ console.log(index)
 <br>
 
 ## Expressões e operadores
-- Expressions
+- Expressions ( É Qualquer linha de código que resolve um problema)
+
+```js
+// Você declarar uma variavel para armazenar um dado de certa forma você resolveu um problema 
+    let number 
+```
 - Operators 
     - Binary
+ ```js
+ // o BINARIO é quando usa dois operadorandos 
+    let number=1
+    
+    console.log(number +1)
+```
     - Unary
+```js
+    // o Unario é quando usa somente um opradorandos
+    let number=1
+    // usando o ++ vocÊ incrementa 1 a variavel
+    console.log(number++)
+    // Usando -- você decrementa 1 da variavel
+    console.log(number--)
+```
+
     - Ternary
+ ```js
+    // o TERNARIO é quando você verifica se é verdadeiro ou falso funciona como um if que veremos mais a frente
+    let number=1
+    // Primeiro:   Teste logico, seguido por um ? pra indicar uma condicional, primeiro se for verdadeira e a segunda a falsa 
+    console.log(number=1 ? "alo":"nada")
+ 
+```
