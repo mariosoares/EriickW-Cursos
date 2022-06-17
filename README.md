@@ -535,3 +535,12 @@ let index = techs.indexOf('css')
 console.log(index)
 
 ```
+
+<br>
+
+## Expressões e operadores
+- Expressions
+- Operators 
+    - Binary
+    - Unary
+    - Ternary
