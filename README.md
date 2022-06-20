@@ -571,3 +571,75 @@ console.log(index)
     console.log(number=1 ? "alo":"nada")
  
 ```
+
+### ***new***
+- left-hand-side expression
+- Criar um novo objeto
+```js
+// o new é usado para criar objetos usando as funções construtoras do JS no caso do exemplo abaixo o String é uma função construtora
+    let name = new String('Erick')
+    name.surName = "Willian"
+
+    console.log(name)
+```
+
+### Opearadores unários
+
+- typeof
+```js
+    // Serve para mostrar qual é o tipo de dado do elemento depois dele
+
+    let name = "Erick"
+
+    console.log(typeof name)
+```
+
+<br>
+
+- delete
+```js
+    //Serve para deletar um item de um objeto
+
+    const person = {
+        name:'Erick',
+        age:18,
+    }
+
+    delete person.age
+
+    console.log(person)
+```
+
+<br>
+
+### ***Operadores Aritiméticos***
+
+- Multiplicação
+- Divisão
+- Soma
+- Subtração
+```js 
+    console.log(3*5)//Multiplicação
+    console.log(3/5)//Divisão
+    console.log(3+5)//Soma
+    console.log(3-5)//Subtração
+```
+
+- Resto da divisão
+- Incremento 
+- Decremento
+- Exponencial
+```js 
+    console.log(3%5)//Resto da divisão
+    console.log(++3)//Incremento
+    console.log(--3)//Decremento
+    console.log(3**5)//Exponencial
+```
+
+### Grouping operator( )
+```js 
+    // assim como na matemática existe a ordem de precedência na programação tambem existe isso 
+
+    let conta1 = 2 + 3 * 5// Resultado: 17
+    let conta2 = (2 + 3) * 5 //Resultado 25
+```
