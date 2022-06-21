@@ -643,3 +643,101 @@ console.log(index)
     let conta1 = 2 + 3 * 5// Resultado: 17
     let conta2 = (2 + 3) * 5 //Resultado 25
 ```
+
+### ***Operadores de comparação***
+- Irá comparar valores e retornar um Boolean como esposta á comparação
+
+```js
+    let one = 1;
+    let two = 2;
+
+    // == igual a 
+    
+    console.log(two==1);//False
+    console.log(one=="1");//True
+
+    // !=  diferente de
+
+    console.log(one != two)//True
+    console.log(one != 1)//False
+    console.log(one != "1")//False
+
+    // === estritamente igual a ou identico a 
+    console.log(one === "1")//False
+    console.log(one === 1)//True
+
+    // !== estritamente diferente de 
+    console.log(two !== "2")//True
+    console.log(two !== 2)//false
+
+    // >   Maior que
+    console.log(one > two)//False
+
+    // >=  Maior igual a
+    console.log(one >= 1)//True
+    console.log(two >= 1)//True
+
+    // <   Menor que
+    console.log(one < two)//true
+
+    // <=  Menor igual a
+    console.log(one <= two)//true
+    console.log(one <= 1)//True
+    console.log(one <= 0)//False
+```
+
+### ***Operadores de atribuição (Assignment)***
+
+```js
+    let x;
+    console.log(x);
+
+    // Assignment
+    x = 1;
+    console.log(x);
+
+    //Addition Assignment
+    //Essa é uma meneira simplificada de fazer x = x + 2
+    x += 2;
+    console.log(x);
+
+    //Subtraction Assignment
+    //Essa é uma meneira simplificada de fazer x = x - 2
+    x -= 1;
+    console.log(x);
+
+    //Multiplication Assignment
+    //Essa é uma meneira simplificada de fazer x = x * 2
+    x *= 2;
+    console.log(x);
+
+    //Division Assignment;
+    //Essa é uma meneira simplificada de fazer x = x / 2
+    x /= 2;
+    console.log(x);
+
+    //Remainder Assignment
+    x %= 2;
+
+    //Exponetiation Assignment
+    x **= 2;
+```
+
+### ***Operadores Lógicos (logical operators)***
+
+```js
+    //2 valores booleanos, quando verificados,
+    //resultará em vertadeiro ou falso
+
+    let pao = true;
+    let queijo = true;
+
+    // AND && (esse operador so vai retornar true quando os dois elementos forem true)
+    console.log(pao && queijo);
+
+    //OR || (esse operador vai retornar true sempre que tiver pelo menos uma condição verdadeira)
+    console.log(pao || queijo);
+
+    // NOT ! (Serve para negar uma condição)
+    console.log(!pao)
+```
