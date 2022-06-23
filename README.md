@@ -739,5 +739,10 @@ console.log(index)
     console.log(pao || queijo);
 
     // NOT ! (Serve para negar uma condição)
-    console.log(!pao)
+    console.log(!number)
+     if(number>1){
+        console.log("Maior que 10")
+     }else{
+        console.log("Menor que 10")
+     }
 ```
