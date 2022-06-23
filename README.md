@@ -746,3 +746,90 @@ console.log(index)
         console.log("Menor que 10")
      }
 ```
+
+<br>
+
+### Operador Condicional (Ternário)
+
+```js
+    //Dependendo da condição, nós receberemos valores diferentes 
+    // Condição então valor 1 se não valor 2
+    // o sinal de ? serve pra começar uma condicional
+    //e o sinal de : serve para separar o que será feito se uma condição for true ou false
+    // condition ? value1 : value2
+
+    //Café da manhã top
+    let pao = true;
+    let queijo = true;
+
+    const niceBreakFast = pao && queijo ? "Café top" : "Café ruim";
+
+    console.log(niceBreakFast);
+```
+
+<br>
+
+### Operador de String (String operator)
+
+```js
+    // Comparison (comparação)
+    console.log('a'== 'b');
+
+    // concatenation (Concatenação)
+    //Retorna a união de dusas Strings
+    console.log('a'+'b'); 
+```
+
+<br>
+
+### Falsy
+
+- Quando um valor é considerado false em contextos onde um booleano é obrigatorio (condicionais e loops)
+    - false
+    - 0
+    - -0
+    - ""
+    - null
+    - undefined
+    - NaN
+
+```js
+    console.log( 0 ? 'verdadeiro' : 'falso')
+    //Saida: false
+```
+
+<br>
+
+### TRUTHY
+
+- Quando um valor é considerado true em contextos onde um booleano é obriagtório ( condicionais e loops )
+    - true
+    - {}
+    - []
+    - 1
+    - 3.23
+    - "0"
+    - "false"
+    - -1
+    - infinity
+    - -infinity
+
+```js
+    console.log( 1 ? 'verdadeiro' : 'falso')
+    //Saida: true
+```
+
+<br>
+
+### Operator precedence (Precedência de operadores)
+ - 1ª grouping:  ()
+ - 2ª negação, incremento e decremento: ! ++ --
+ - 3ª multiplicação e divisão: * /
+ - 4ª adição e subtração: + -
+ - 5ª relacional: < <= > >= 
+ - 6ª igualdade == != === !== 
+ - 7ª AND : && 
+ - 8ª OR : || 
+ - 9ª condicional : ?: 
+ - 9ª assignment (atribuição): = += -= *=  
+ 
