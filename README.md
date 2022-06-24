@@ -740,11 +740,6 @@ console.log(index)
 
     // NOT ! (Serve para negar uma condição)
     console.log(!number)
-     if(number>1){
-        console.log("Maior que 10")
-     }else{
-        console.log("Menor que 10")
-     }
 ```
 
 <br>
@@ -832,4 +827,73 @@ console.log(index)
  - 8ª OR : || 
  - 9ª condicional : ?: 
  - 9ª assignment (atribuição): = += -= *=  
- 
+
+ ## ***Condicionais e controle de fluxo***
+
+ ### ***if e else***
+ ```js
+    //Serve para tomada de decisão
+
+    /*
+    se(condição){
+        o codigo que será excutado se for 
+        verdadeira
+    }se nao{
+        o codigo que será executado se for
+        falso
+    }
+    */
+let temperature = 38.5;
+
+   if(temperature>=37.5){
+    console.log("Febre alta");
+   }else if(temperature < 37.5 && temperature >=37 ){
+    console.log("Febre media");
+   }else{
+    console.log("Saudável")
+   }
+ ```
+
+ <br>
+
+ ### ***switch***
+
+```js 
+    //Funciona como um if com mais casos  
+    switch(expression){
+        case "a":
+            //codigo
+            break
+        case "b":
+            //codigo
+        default:
+    }
+```
+
+<br>
+
+### ***throw e try/catch***
+- Na tradução de *throw* siginifica *"Disparar"* ou *"Lançar"* serve para disparar uma mensagem de erro 
+- Na tradução de *try* siginifica *"tentar"*  serve para executar uma função sem que de erro
+- Na tradução de *catch* siginifica *"pegar"* ou seja serve para guardar a mensagem de erro caso o programa ou funçao apresente tal 
+
+```js
+    function sayMyName(name=""){
+        if(name==""){
+            throw "Nome é obirgatório"; 
+        }
+        console.log("Depois do erro")
+
+    }
+try{
+    //Aqui ele tenta executar
+    sayMyName();
+}catch(e){
+    //Aqui ele guarda a mensagem de erro dentro da variavel "e"
+    console.log(e)
+}
+```
+
+<br>
+
+
