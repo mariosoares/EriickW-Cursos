@@ -896,4 +896,60 @@ try{
 
 <br>
 
+## Estrutura de repetição
 
+### ***for***
+- Na tradução significa *"para"*
+
+```js
+//break - para a execução do loop
+//continue - pula a execução do momento
+    for(let i=0;i<=100;i++){
+        if(i === 50){
+            break
+        }
+        console.log(i)
+    }
+```
+
+<br>
+
+### ***while***
+
+- Na tradução significa em enquanto
+```js
+    let i=0
+    while(1<10){
+        console.log(i);
+        i++;
+    }
+```
+
+<br>
+
+### ***for...of***
+- É um for para arrays e strings 
+```js
+    let name ='Erick'
+    let names = ['Gustavo','Maria','Pedro']
+
+    for(let char of name){
+        console.log(char)
+    }
+```
+
+<br>
+
+### for...in
+- Vai criar um loop emcima de um objeto (usando os elementos do objeto no caso)
+```js
+    let person ={
+        name:'Jhon';
+        age:30;
+        weight:88.6;
+
+    }
+    for(let property in person){
+        console.log(property)
+    }
+```
