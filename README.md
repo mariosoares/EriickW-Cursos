@@ -953,3 +953,32 @@ try{
         console.log(property)
     }
 ```
+
+## Exercicios básicos
+- 1-Transformar notas escolares
+    - Crie um algoritimo que transforme as notas do sistema numérico para sistema de notas em caracteres tipo A B C
+        -  De 90 para cima: A
+        -  Enter 80-89: B
+        -  Entre70-79: C
+        -  Entre 60-69: D
+        -  Menor  que 60: F
+```js
+function notaTransformada(nota){
+  if(nota >= 90 && nota<=100>){
+    console.log("Parabéms tirou A")
+  }else if(nota>=80 && nota <=89 ){
+    console.log("Tirou B")
+  }else if(nota>=70 && nota<=79){
+    console.log("Tirou C")
+  }else if(nota>=60 && nota<=69){
+    console.log("Tirou D")
+  }else if(nota<60){
+    console.log("Infelizmente você tirou F")
+  }else{
+    console.log("Nota invalida")
+  }
+    
+}
+notaTransformada(72);
+```
+        
