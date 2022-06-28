@@ -981,4 +981,58 @@ function notaTransformada(nota){
 }
 notaTransformada(72);
 ```
-        
+- Outra forma:
+```js
+
+
+function finalScore(score){
+    let scoreA = score>=90 && score<=100;
+    let scoreB = score>=80 && score<=89;
+    let scoreC = score>=70 && score<=79;
+    let scoreD = score>=60 && score<=69;
+    let scoreF = score<=60 && score>=0;
+  
+        if(scoreA){
+            console.log("A");
+        }else if(scoreB){
+            console.log("B");
+        }else if(scoreC){
+            console.log("C");
+        }else if(scoreD){
+            console.log("D");
+        }else if(scoreF){
+            console.log("F");
+        }else{
+            console.log("Valor inválido !");
+        }
+}
+
+finalScore(69);
+```
+- 2-Crie um objeto com2 prorpiedeades, ambas do tipo array:
+    - receitas:[]
+    - despesas:[]
+    - Agora , cria uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem se a família está com saldo positivo ou negativo, seguindo o valor do saldo
+```js
+ 
+  let family={
+    receitas:[1000,2000,200],
+    despesas:[200,300,440],
+  }
+function sum(array){
+  let total=0;
+  for(let value of array){
+    total += value
+  }
+  return total;
+}
+function calculateBalance(){
+  const receitaFamily = sum(family.receitas)
+  const despesaFamily = sum(family.despesas);
+  
+  let dinheiro = receitaFamily-despesaFamily;
+  
+  console.log(dinheiro);
+}
+calculateBalance()
+```
