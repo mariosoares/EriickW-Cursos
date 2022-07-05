@@ -137,6 +137,7 @@
     <br>
 
 ## ***Variáveis***
+- [Arquivo com mais exemplos](./Fundamentos/Variaveis.js)
 - São nomes simbólicos para receber algum valor
 - atalhos de código 
 - Identificadores
