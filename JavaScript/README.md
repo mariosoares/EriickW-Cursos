@@ -61,7 +61,7 @@
 
 
  - **String** 
-- [Pasta dos exemplos de strings](Tipos_de_dados/strings)
+- [Arquivo dos exemplos de strings](./Fundamentos/strings.js)
     - Cadeia de caracteres Ex : ABC
     - Para mostrar ou identificar uma string:
         - "" aspas duplas
@@ -72,7 +72,7 @@
 
 
 - **number**
-- [Pasta dos exemplos de numbers](Tipos_de_dados/numbers)
+- [Arquivo dos exemplos de numbers](./Fundamentos/number.js)
     - números
     
         - 33 (numeros inteiros)
@@ -80,10 +80,10 @@
         - NaN (Not a Number - não é um número)
         - Infinity (infinito)
 
-        <br>
+    <br>
 
 - **Boolean**
-- [Pasta dos exemplos de boolean](Tipos_de_dados/boolean)
+- [Arquivo dos exemplos de boolean](Tipos_de_dados/boolean)
     - Somente 2 valores
         - true // verdadeiro
         - false // falso
