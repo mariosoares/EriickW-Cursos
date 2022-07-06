@@ -83,7 +83,7 @@
     <br>
 
 - **Boolean**
-- [Arquivo dos exemplos de boolean](Tipos_de_dados/boolean)
+- [Arquivo dos exemplos de boolean](./Fundamentos/boolean.js)
     - Somente 2 valores
         - true // verdadeiro
         - false // falso
