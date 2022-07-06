@@ -107,6 +107,7 @@
 <br>
 
 - ***Object***
+- [Arquivo com mais exemplos](./Fundamentos/object.js)
     - Objeto
     - Propriedades / atributos
     - Funcionalidades / métodos
@@ -125,6 +126,7 @@
     <br>
 
 - ***Array***
+- [Arquivo com mais exemplos](./Fundamentos/arrays.js)
     - Ele funcina como uma lista
     - Ele agrupa dados
 
@@ -234,6 +236,7 @@ console.log('> existe x depois do bloco? ', x);
 - statement (declaração)
 
 ## ***Functions***
+- [Arquivo com mais exemplos](./Fundamentos/functions.js)
 - As functions possuem duas finalidades 
     - Explicar o que um trecho de código faz 
     - Repetir esse trecho de codigo diversas vezes sem precisar copiar e colar
@@ -522,7 +525,7 @@ techs.shift()
 // Pegar somente alguns elementos do array
 // Usando o .slice() você meio que "corta" e mostra somente de qual posição ate qual posição você quer ver
 
-//console.log(techs.slice(1,3))
+console.log(techs.slice(1,3))
 
 // Remover 1 ou mais items em qualquer posição do array
 // o metodo .splice(qual posição no array, quantidade de items a serem retirados) serve para retirar 1 ou mais itens de um array
