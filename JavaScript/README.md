@@ -555,7 +555,7 @@ console.log(index)
  // o BINARIO é quando usa dois operadorandos 
     let number=1
     
-    console.log(number +1)
+    console.log(number + 1)
 ```
     - Unary
 ```js
