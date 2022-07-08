@@ -835,6 +835,7 @@ console.log(index)
  ## ***Condicionais e controle de fluxo***
 
  ### ***if e else***
+ - [Arquivo com mais exemplos](./Estruturas%20de%20Controle/if.js)
  ```js
     //Serve para tomada de decisão
 
@@ -861,7 +862,7 @@ let temperature = 38.5;
  <br>
 
  ### ***switch***
-
+- [Arquivo com mais exemplos](./Estruturas%20de%20Controle/switch.js)
 ```js 
     //Funciona como um if com mais casos  
     switch(expression){
@@ -877,6 +878,7 @@ let temperature = 38.5;
 <br>
 
 ### ***throw e try/catch***
+- [Arquivo com mais exemplos](./Fundamentos/erro.js)
 - Na tradução de *throw* siginifica *"Disparar"* ou *"Lançar"* serve para disparar uma mensagem de erro 
 - Na tradução de *try* siginifica *"tentar"*  serve para executar uma função sem que de erro
 - Na tradução de *catch* siginifica *"pegar"* ou seja serve para guardar a mensagem de erro caso o programa ou funçao apresente tal 
