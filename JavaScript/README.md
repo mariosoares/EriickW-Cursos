@@ -749,7 +749,7 @@ console.log(index)
 <br>
 
 ### Operador Condicional (Ternário)
-
+- [Arquivo com mais exemplos](./Fundamentos/ternario.js)
 ```js
     //Dependendo da condição, nós receberemos valores diferentes 
     // Condição então valor 1 se não valor 2
