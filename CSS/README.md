@@ -27,11 +27,15 @@
 - O valor column muda o eixo do flex fazendo todos os itens ficarem em posição vertical ou seja em coluna 
 
 **Multi linhas** 
-*flex-wrap* (Capacidade que o flex tem de usar multi linas )
+- [Pasta do FlexBox](./FlexBox/flex-wrap)
+*flex-wrap* (Capacidade que o flex tem de usar multi linas)
 - Podemos usar multi linhas 
 - Cada nova linha, um novo felx container
+- Exemplo: Se os itens não couberem mais na div por exemplo, a div tem `width:100px` e tem quatro itens cada um com `width:50px` usando o `flex-wrap` você avisa ao flex que quando os itens nao caberem mais no container é para quebrar linha
 
-
+***flex-flow***
+- shorthand
+- flex-direction || flex-wrap
 
 **Alinhamento**
     - Principal 
