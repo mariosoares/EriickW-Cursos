@@ -9,7 +9,7 @@
     - Flex item
 - Nesting (conceito de que elementos vivem dentro de outro elemento)
 - Axis (é a ideia de eixo )
-    - main
+    - main (Horizontal)
         - start, end
     - cross (cruzado)
         - start, end
@@ -36,8 +36,25 @@
 ***flex-flow***
 - shorthand
 - flex-direction || flex-wrap
+- Uma abreviação escrita assim `flex-flow: column wrap`
+- Na abreviação vem primeiro o flex-direction depois o wrap
 
-**Alinhamento**
-    - Principal 
-    - Cruzado 
+***Alinhamento***
+
+*Eixo Principal (Horizontal)*
+ - Alinhamento dos elementos dentro do container 
+ - Distribuiçao dos elementos
+
+- *Valores*
+    - flex-start (Alinha todos os itens do container horizontalmente no começo)
+    - flex-end (Alinha todos os itens do container horizontalmente no fim)
+    - center (Alinha todos os itens do container horizontalmente no começo)
+    - space-around (Cria espaço ao redor dos elementos)
+    - space-between (Cria espaço ao entre dos elementos)
+    - space-evenly (Cria espaço ao por igual dos elementos ou seja o espaçamento será igual para todos os itens)
+
+*Eixo Cruzado*
+
+
+
 **Espaços entre os itens**
