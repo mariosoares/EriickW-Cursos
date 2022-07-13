@@ -23,9 +23,13 @@
 - Flex é uma dimensão (horizontal ou vertical)
 - podemos mudar a direção com `flex-direction`
 - valores: (row | row-reverse | column | column-reverse)
+- o valor padrão do flex-direction é o row (que no caso seria em linha), e o row-reverse ele meio que inverte a posição em linha 
+- O valor column muda o eixo do flex fazendo todos os itens ficarem em posição vertical ou seja em coluna 
 
 **Multi linhas** 
-
+*flex-wrap* (Capacidade que o flex tem de usar multi linas )
+- Podemos usar multi linhas 
+- Cada nova linha, um novo felx container
 
 
 
