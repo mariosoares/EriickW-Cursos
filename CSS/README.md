@@ -42,6 +42,9 @@
 ***Alinhamento***
 
 *Eixo Principal (Horizontal)*
+
+`justify-content`
+- [Pasta do justify-content ](./FlexBox/justify-content)
  - Alinhamento dos elementos dentro do container 
  - Distribuiçao dos elementos
 
@@ -55,6 +58,14 @@
 
 *Eixo Cruzado*
 
+`align-items`
+- Alinhamento dos elementos no eixo cruzado
+
+*Valores*
+- stretch(Padrão)
+- flex-start 
+- flex-end
+- center
 
 
 **Espaços entre os itens**
