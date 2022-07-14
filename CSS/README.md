@@ -59,13 +59,23 @@
 *Eixo Cruzado*
 
 `align-items`
+- [Pasta do justify-content ](./FlexBox/justify-content)
 - Alinhamento dos elementos no eixo cruzado
 
 *Valores*
 - stretch(Padrão)
-- flex-start 
-- flex-end
-- center
+- flex-start (Deixaria eles alinahdos no começo do eixo vertical )
+- flex-end (Deixaria eles alinahdos no fim do eixo vertical )
+- center (Deixaria eles alinahdos no centro do eixo vertical )
 
 
 **Espaços entre os itens**
+
+`gap`
+- [Pasta do justify-content ](./FlexBox/gap)
+- Espaços entre os elementos 
+
+*valores*
+- Unidade de medidas 
+- fixas: px, pt
+- flexíveis: %, em, rem
