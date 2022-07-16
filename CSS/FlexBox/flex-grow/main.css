@@ -1,0 +1,17 @@
+
+.container{
+    display:flex;
+    align-items: stretch;
+    height: 50px;
+
+    border:1px dashed red;
+}
+
+.item{
+    border: 1px solid;
+}
+.container .item:nth-child(1){
+    flex-grow: 1; /* O flex-grow faz com que o item com esse atributo ocupe frações do espaço, como padrão ele possui
+    o valor de 0, pode ser usado em varios itens para definir os espaços que serão ocuapdos no caso desse ele vai ocupar
+    todo o espaço em branco porque os outros estão com valor padrão */
+}

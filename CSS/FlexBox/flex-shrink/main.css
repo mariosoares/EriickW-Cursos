@@ -1,0 +1,16 @@
+
+.container{
+    display:flex;
+    height: 50px;
+    width: 160px;
+    border:1px dashed red;
+}
+
+.item{
+    border: 1px solid;
+    flex-basis: 100%;
+}
+.container .item:nth-child(1){
+    flex-shrink: 0; /* Como padrão o flex-shrink vem com o valor 1, fazndo com que os itens se diminuam para que se
+    encaixem no container, colocando 0 você quebra isso fazendo com que ele respeite seu tamanho e quebre a caixa*/
+}

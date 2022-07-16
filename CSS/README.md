@@ -79,3 +79,22 @@
 - Unidade de medidas 
 - fixas: px, pt
 - flexíveis: %, em, rem
+
+
+<hr>
+
+## Propriedades para os itens
+**flex-basis**
+- Define o tamanho inicial dos elementos, em unidades de pixel, antes que o espaço remanescente seja redistribuído. O valor inicial desta propriedade é auto — neste caso o navegador observa se os itens possuem o mesmo tamanho.
+**flex-grow**
+- [Pasta do justify-content ](./FlexBox/flex-grow)
+- O crescimento do item dentro do container em relação aos espaços vazios
+- Faz com que o item com o atributo ocupe frações de espaço
+**flex-shrink**
+- [Pasta do justify-content ](./FlexBox/flex-shrink)
+- A capacidade do item encolher dentro do container
+**flex**
+- shorthand
+- flex-grow flex-shrink flex-basis
+- podem ter 1,2 e 3 valores
+**order**
