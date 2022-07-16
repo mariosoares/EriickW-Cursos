@@ -84,12 +84,16 @@
 <hr>
 
 ## Propriedades para os itens
+
+- [Pasta do uso de flex box para organizar itens na pagina](./FlexBox/Exemplo)
+
 **flex-basis**
 - Define o tamanho inicial dos elementos, em unidades de pixel, antes que o espaço remanescente seja redistribuído. O valor inicial desta propriedade é auto — neste caso o navegador observa se os itens possuem o mesmo tamanho.
 **flex-grow**
 - [Pasta do justify-content ](./FlexBox/flex-grow)
 - O crescimento do item dentro do container em relação aos espaços vazios
 - Faz com que o item com o atributo ocupe frações de espaço
+
 **flex-shrink**
 - [Pasta do justify-content ](./FlexBox/flex-shrink)
 - A capacidade do item encolher dentro do container
@@ -98,3 +102,30 @@
 - flex-grow flex-shrink flex-basis
 - podem ter 1,2 e 3 valores
 **order**
+- Serve para alterar a ordem dos itens 
+- Não muda a estrutura html so muda visualmente 
+- Começa com valor inicial de 0
+
+### Desafios de flexbox
+-  [Pasta dos desafios](./FlexBox/Desafios%20de%20Flexbox)
+
+***1)*** Crie um `<header>` de um site que contenha uma logo e um menu 
+- Um elemento deverá ficar um ao lado do outro.
+- A logo que ficará na extrema esquerda e o menu ficará na extrema direita 
+ - Os itens do menu ficarão um ao lado com um espaço de 8rem entre eles
+ - O último elemento do menu será um botão de contato e você poderá utilizar o seletor `:lest-child` para estilizar
+ - Obs: A imagem abaixo é apenas um exemplo você pode fazer esse desafio com o estilo que quiser
+
+<br>
+
+<img src="screenshot/MenuNavigation.png">
+
+<br>
+
+***2)*** Crie um layout com 2 colunas, uma ao lado da outra 
+- A coluna da esquerda deverá ter 25% de tamanho e a coluna a direita deverá ocupar todo o espaço que sobra
+- Faça uma separação de 1rem entre os elementos
+
+<br>
+
+<img src="screenshot/DuasColunas.png">
