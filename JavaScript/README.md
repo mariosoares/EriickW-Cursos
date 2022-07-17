@@ -1050,6 +1050,7 @@ calculateBalance()
 - É o HTML convertido para um Objeto JavaScript
 - API que representa e interage com o html
 - Estrutura de dados de tipo árvore, criada pelo browser
+- OBS: API é tudo aquilo que te auxilia a interagir com algo
 
 ## Para que serve ?
 - JavaScript usa a DOM para se conectar ao HTML
