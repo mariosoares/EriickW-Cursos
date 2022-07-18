@@ -1127,3 +1127,66 @@ calculateBalance()
 
 ```
 
+## Manipulando Conteúdos 
+
+```js
+
+// textContent serve para colocar conteudo em uma tag especifica que foi selecionada anteriormente
+//
+
+const element = document.querySelector("h1")
+element.textContent = "Olá devs"
+
+```
+
+<br>
+
+```js
+//innerText serve para alterar um texto interno de uma tag que foi antes especificada
+
+const text =  document.querySelector("p")
+text.innerText = "Esse texto foi adicionado com o innerText"
+
+```
+
+<br>
+
+```js
+// innerHTML alterar o conteudo HTML interno
+//funciona da mesma forma que o innerText mas com uma peculiaridade pode se colocar tags html dentro dele 
+
+element.innerHTML = "Olá devs! <button>innerHTML</button>"
+
+```
+
+<br>
+
+```js
+//value serve para alterar o valor de um input
+// 
+
+const input = document.querySelector("input")
+
+input.value = "Valor que eu quiser"
+
+```
+
+<br>
+
+```js
+// Atributos
+// setAttribute Adiciona um novo atributo ou modifica o valor de um atributo existente num elemento específico.
+// Sintaxe: element.setAttribute(name, value);
+const header = document.querySelector("header")
+header.setAttribute("id", "header")
+
+const headerID = document.querySelector("#header")
+
+
+// o getAttribute serve para pegar o atributo de uma tag
+console.log(headerID.getAttribute("id"))
+
+
+// Usando o removeAttribute voce pode remover um atributo de um elemento html
+header.removeAttribute("id")
+```
