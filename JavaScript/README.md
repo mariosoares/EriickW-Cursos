@@ -1187,6 +1187,81 @@ const headerID = document.querySelector("#header")
 console.log(headerID.getAttribute("id"))
 
 
-// Usando o removeAttribute voce pode remover um atributo de um elemento html
+// Usando o .removeAttribute voce pode remover um atributo de um elemento html
 header.removeAttribute("id")
+```
+
+## Manipulando estilos e classes
+- [Pasta](./DOM/Estilos%20e%20Classes)
+
+```js
+//Alterando estilos
+const body = document.querySelector("body")
+// Usando o .style você pode usar as propriedades CSS
+body.style.backgroundColor = "#f9f3D2"
+```
+```js
+// classList
+
+const element = document.querySelector("header")
+// Usando o .classList.add(nome da classe) você pode adicionar uma classe ao elemento html
+element.classList.add("bg", "font")
+
+//Serve para remover a classe do elemento HTML
+element.classList.remove("bg")
+
+//O .toggle vai pesquisar no html se a classe existir ele ira tirar se não ele ira colocar
+element.classList.toggle("bg")
+```
+
+## Navegando pelos elementos
+
+```js
+// Navegando pelos elementos
+// .parentNode e parentElement
+//Serve para selecionar o elemento "pai" do elemento entre parenteses
+const body = document.querySelector("body")
+
+console.log(body.parentNode)
+//Saída: HTML
+```
+
+```js
+// Pegando elementos filhos
+// .parentNode e parentElement
+//Serve para selecionar o elemento "pai" do elemento entre parenteses
+const body = document.querySelector("body")
+
+console.log(body.parentNode)
+//Saída: HTML
+```
+
+## Criando e adicionando elementos na página
+```js
+// Criando adicionando elementos
+
+// createElement
+// Serve para criar um elemento HTML
+const div = document.createElement("div")
+div.innerText = "Olá Devs !"
+
+// append prepend
+const body = document.querySelector("body")
+
+
+// o append serve para adicionar um elemento criado
+// Coloca após o script no html
+body.append(div)
+
+
+// o prepend serve tambem para adicionar
+// Coloca o elemento antes de qualquer outra 
+// ou seja coloca como primeiro filho 
+body.prepend(div)
+
+// insertBefore
+// Serve para inserir um elemento antes de algo 
+// .insertBefore(elemento que será adicionado, antes de qual tag ele deve ser adicionado )
+const script = body.querySelector("script")
+body.insertBefore(div, script)
 ```
