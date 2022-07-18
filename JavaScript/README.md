@@ -1057,3 +1057,73 @@ calculateBalance()
 - Manipular o HTML com o JavaScript 
 - Você só programa para WEB porque existe a DOM 
 
+
+## Selecionando Elementos
+- [Pasta do Selecionando Elementos](./DOM/SelecionandoElementos)
+
+```js
+    //document.getElementById("") serve para selecionar elementos HTML atravez do ID
+    // Como pode se ver usamos um item do objeto document o .getElementById("")
+    // Colocando dentro dos parentes o ID você seleciona o elemento
+
+    const titulo = document.getElementById("titulo")
+    console.log(titulo);
+
+```
+
+```js
+    //document.getElementsByClassName("") serve para selecionar elementos HTML atravez da classe
+    // Como pode se ver usamos um item do objeto document o .getElementsByClassName("")
+    // Colocando dentro dos parentes o class você seleciona o elemento
+    // Com ele você pode selecionar diversos elementos com a mesma classe
+    // Retorna um HTMLCollection
+    const paragrafo = document.getElementsByClassName("paragrafo")
+    console.log(paragrafo)
+
+```
+
+
+```js
+    //document.getElementsByTagName("") serve para selecionar elementos HTML atravez da Tag HTML
+    // Como pode se ver usamos um item do objeto document o .getElementsByTagName("")
+    // Colocando dentro dos parentes o class você seleciona o elemento
+    // Com ele você pode selecionar diversos elementos com a mesma tag
+
+    const main = document.getElementsByTagName("main")
+    console.log(main)
+
+```
+
+```js
+    //document.querySelector("") serve para selecionar elementos HTML atravez do seletor CSS
+    // Como pode se ver usamos um item do objeto document o .querySelector("")
+    // Colocando dentro dos parentes o class você seleciona o elemento
+    // O querySelector seleciona o primeiro item com o seletor CSS dentro do parenteses
+
+    const element = document.querySelector(".element")
+    console.log(element)
+
+```
+
+```js
+    //document.querySelector("") serve para selecionar elementos HTML atravez do seletor CSS
+    // Como pode se ver usamos um item do objeto document o .querySelector("")
+    // Colocando dentro dos parentes o class você seleciona o elemento
+    // O querySelector seleciona o primeiro item que ele achar na página com o seletor CSS dentro do parenteses
+
+    const element = document.querySelector(".element")
+    console.log(element)
+
+```
+
+```js
+    //document.querySelectorAll("") serve para selecionar elementos HTML atravez do seletor CSS
+    // Como pode se ver usamos um item do objeto document o .querySelector("")
+    // Colocando dentro dos parentes o class você seleciona o elemento
+    // O querySelector seleciona todos os items com o seletor CSS dentro do parenteses
+    // Vai retornar um Nodelist
+    const p = document.querySelectorAll(".paragrafo")
+    console.log(p)
+
+```
+
