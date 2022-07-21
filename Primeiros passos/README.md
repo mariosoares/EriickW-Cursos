@@ -106,3 +106,55 @@ A detecção de padrão vem da ideia de você extrair características a fim de 
 - Reconhecimento de fala
 - Análise de cenas
 - Classificação de documentos 
+
+## Pilares: Abstração
+
+- Abstrair: Observar, um ou mais elementos avaliando características e propriedades em separado
+- Abstração: Processo intelectual de isolamento de um objeto da realidade 
+- Generalizar: Tornar-se geral, mais amplo, extenção, na lógica, é a operação intelectual que consiste em reunir numa classe geral, um conjunto de seres ou fenômenos similares
+
+***Como classificar os Dados?***
+
+- Pelas características
+- Pontos essenciais
+- Generalizar X Detalhar
+
+## Pilares: Algoritimos 
+
+- É um processo de resolução de problemas "step by step"(Passo a passo) utilizando instruções
+
+***Instruções:***
+
+- O que precisa ser feito?
+- Qual a ordem de execução?
+- De certa forma o computador é "burro" ou seja você precisa indicar as instruções de forma detalhada
+- Essas instruções precisam ser entendido por humano e por uma maquina
+
+***Desenvolvimento do programa:***
+
+- Análise 
+
+    Estudo e definição dos dados de entrada e saída
+
+- Algoritmo
+
+    Descreve o problema por meio de ferramentas narrativas , fluxograma, ou pseudocódigo
+
+- Codificação
+
+    O algoritmo é codificado de acordo com a linguagem de programação escolhida 
+
+***Sequência de passos com objetivo definido***
+
+***Execução de tarefas específicas***
+
+***Conjunto de operações que resultam em uma sucessão finita de ações***
+
+### Como Construir um algoritmo?
+- Compreenção do problema (Pontos mais importantes)
+- Definição de dados de entrada (Dados fornecidos e Cenário)
+- Definir processamento }(Calculos e Restrições)
+- Definir dados de saída 
+- Utilizar um método de construção
+- Teste e diagnóstico
+
