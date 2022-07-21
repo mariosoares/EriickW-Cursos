@@ -64,3 +64,133 @@
 - Verificação do módulo
 
 ## Fundamentos de algoritmos
+
+### ***Tipologia e variáveis:***
+*Qual é a função do computador?*
+
+- Processar informações que passamos para ele e elas se dividem em duas
+    - Dados
+    - Instruções
+
+E esses dados são tratados e processados, mas quais são os tipos de dados?
+- Numéricos
+    - Inteiros : 0, 1, 5, 50, 60, 800,...-58, -50, -49
+    - Reais : 5.95, 9.54, 0.555, -8.8, 0, 1, 5, 50, 60, 800, -58, -50, -49
+- Caractére ( Tudo Aquilo que não é representado como numero, geralemte são delimitado por aspas )
+- Lógicos (Tipo Boolenao)
+    - true - 1
+    - false - 0
+
+Esses são os tipos básicos de dados mais conhecidos como ***tipos primitivos***
+
+<br>
+
+***Variável***
+
+**O que é uma variável ?**
+- É um tipo de estrutura mutável e pode possuir variações de valor, ela pode ser sobreescrita e pode mudar seu valor
+- Uma estrutura que irá receber um tipo de dado
+- Pode assumir qualque um ods valores de um determinado conjunto de valor (Por exmplo ela esta limitada pelo seu tipo primitivo ou seja se a variavel for do tipo numerico ela irá receber so dados do tipo numerico)
+
+**Regras :**
+- Atribuição de um ou mais caracteres 
+- Primeira letra - não número
+- Sem espaços em branco
+- Vedado
+    - Não permissão na Utilização de palavras reservadas
+- Caracteres e números
+
+**Papéis de uma variável:**
+- Ação
+    - Modificação de estado de algun algoritimo
+- Controle
+    - Vigiada, Controle de alguma estrutura
+
+
+### ***Instruções primitivas:***
+Elas vão determinar as ações emcima dos nossos dados um exemplo são os cáculos matemáticos usando as variaveis ou as constantes
+
+***Operadores***
+
+<img src="../img/operadores.png">
+
+<br>
+
+***Definição Formal:***
+
+Instruções são linguagem de **palavras-chave** (vocabulário) de uma determinada de programação que tem por finalidade comandar um computador queirá tratar os dados
+
+### ***Estruturas condicionais e operadores:***
+
+Estado de uma pessoa ou coisa com uma condição
+
+**Condicional :** Que expressa uma condição ou suposição, contem ou implica uma suposição ou hipótese
+
+**Resumindo** funciona como se fosse um **"se"**
+
+*Exemplo:* Vou sair primeiro preciso ver se está chovendo
+- **Se** estiver chovendo eu fico em casa
+- **Senão** vou ao cinema
+
+A condicional funciona como um meio de caminho para que o programa escolha o caminho referente aos dados que ele vai receber, **"se"** acontecer algo faça(Esse faça é um pedaço de código), **senão** faça isso
+ 
+*Elas são divididas em 3 tipos:*
+- Simples: Onde há apenas uma condição ( Um **se** )
+- Composta : Onde possui uma excesão ( Um **se** e um **senão** )  
+
+Para auxiliar em uma estrutura condicional é usado os operadores relacionais 
+
+<img src="../img/relacionais.png">
+
+Exemplos:
+```
+Se(<condição>) então
+    <instruções para a condição verdadeira>
+fim_se    
+```
+- Condicional simples
+```
+Início programa:
+
+A = 0
+B = 0
+X = 0
+
+leia A
+leia B
+
+X = A + B
+
+ se( X > 10 )
+    escreva X
+ Fim se
+
+Fim programa   
+```
+- Obs: Na parte A = 0 , a letra A representa uma variavel, e não se diz A **igual** a 0, se diz A **recebe** 0, ou seja a variavel A está recebendo o valor de 0
+
+- Condicional composta
+```
+Início programa:
+
+A = 0
+B = 0
+X = 0
+
+leia A
+leia B
+
+X = A + B
+
+se( X > 10 )
+    escreva X
+senão
+    escreva "Numero menor que 10"
+ Fim se
+
+Fim programa   
+```
+
+***Operadores Lógicos :***
+
+<img src="../img/logicos.png">
