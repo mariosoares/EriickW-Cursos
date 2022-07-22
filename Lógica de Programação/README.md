@@ -194,3 +194,66 @@ Fim programa
 ***Operadores Lógicos :***
 
 <img src="../img/logicos.png">
+
+<br>
+
+### **Estruturas de repetição :**
+Usado quendo você quer repetir o mesmo trecho de  codigo varias vezes geralmente chamado de loop
+- Em um loop precisa ter condições de parada para que não haja um loop infinito ou seja nele deve se colocar uma condição e ele irá repetir o trecho de codigo até que a certa condição esteja satisfeita
+
+***"Mas não era só repetir o meu código?"***
+- Usando uma estrutura de repetição você reduz linhas
+- Melhora a compreensão do seu código
+- E tem uma grande redução de possiveis erros
+
+**Exemplo**
+- **Enquanto** a grama estiver alta eu vou corta-la
+- O **Enquanto** é usado quando eu não sei uma condição de parada ou seja eu não sei quantas vezes eu preciso passar para cortar toda a grama
+
+```portugol
+grama = falso
+
+enquanto( grama == falso)faça
+
+    <instrução de cortar a grama>
+    <atualiza grama>
+fim enquanto
+```
+
+- **Repita**: Procurar artigo, virar a página analisar conteudo
+- O **Repita** o teste lógico é feito no final ou seja ele garante que o trecho de código seja executado uma vez diferente do **Enquanto** que se a condição for verdadeira ele ja sai e nao executa o código
+
+```portugol
+grama = falso
+
+faça
+    <instrução de cortar a grama>
+    <atualiza grama>
+enquanto (grama == falso)
+
+fim faça enquanto
+```
+
+- **Para...de..até** usado para quando se sabe a quantidade de repetições 
+
+```
+somatorio = 0
+
+para inicio = 1 até 10
+    somatório = somatorio + inicio
+    Escrevea somatorio
+Fim para
+```
+
+### ***Vetores e Matrizes :***
+
+***Vetores :***
+- Vai ser uma sequencia de dados
+- **Definição formal :** Um vetor é caracterizado por uma variavel dimensionada com tamanho pré-fixado
+- Variavel que possui uma sequência que pode receber diversos valores
+
+***Matriz :***
+- **Definição formal :** Matriz é uma tabela organizada em linhas e colunas no formado m x n, onde **m** representa o numero de lihas (horizontal) e o **n** o número de colunas (vertical)
+
+### ***Funções :***
+- 
