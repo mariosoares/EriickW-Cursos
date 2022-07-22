@@ -256,4 +256,10 @@ Fim para
 - **Definição formal :** Matriz é uma tabela organizada em linhas e colunas no formado m x n, onde **m** representa o numero de lihas (horizontal) e o **n** o número de colunas (vertical)
 
 ### ***Funções :***
-- 
+- *Sininimos que talvez você vá ouvir e saiba que todas se tratam de uma função:*
+    - Subalgoritmo
+    - Subprograma
+    - Bloco
+    - Método (Mais para linguagens de programação orietada a objeto [ POO ] )
+    - Sub-rotina
+- **Dfinição Formal :** As funções, ou sub-rotinas são blocos de instruções que ralizam tarefas específicas, são blocos de instruções(código) identificados por nomes e parÂmetros
