@@ -1,5 +1,8 @@
 # CSS
 
+## Conceitos Básicos
+<img src="../img/seletores.png">
+
 ## Flexbox
 
 - [Pasta do FlexBox](./FlexBox)
