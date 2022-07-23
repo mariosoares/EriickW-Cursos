@@ -40,7 +40,7 @@
 - shorthand
 - flex-direction || flex-wrap
 - Uma abreviação escrita assim `flex-flow: column wrap`
-- Na abreviação vem primeiro o flex-direction depois o wrap
+- Na abreviação vem primeiro o flex-direction depois o wrap.
 
 ***Alinhamento***
 
