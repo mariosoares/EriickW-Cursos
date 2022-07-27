@@ -235,6 +235,8 @@ console.log('> existe x depois do bloco? ', x);
     * Escrever em inglês
 - statement (declaração)
 
+<img src="../img/declaracaoDeVariaveis.png">
+
 ## ***Functions***
 - [Arquivo com mais exemplos](./Fundamentos/functions.js)
 - As functions possuem duas finalidades 
@@ -509,6 +511,13 @@ let techs = ["html","css","js"]
 // Adicionar um item no fim
 //O metodo .push identifica qual é o ultimo item do array e adiciona o que foi colocado como argumento dentro dos parenteses
 techs.push("node.js")
+
+
+// itera um array
+//Ele vai passar pelos items de um array executando a função que foi passada como parÂmetro
+techs.forEach(funtion(item, index){
+    console.log(item , index)
+})
 
 // Adicionar no começo
 // Funciona da do meio inverso ao do push
