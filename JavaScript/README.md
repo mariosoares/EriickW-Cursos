@@ -386,8 +386,13 @@ let sayMyName = function sayMyName(){
 
 ### ***Arrow Function :***
 - Maneira mais moderna e compacta de escrever uma função
-
-```js
+- Caso exista apenas uma linha, pode dispensar as chaves e o return
+- Casi exista apenas um parÂmetro pode dispensar os parêntese
+- Arrow function **NÃO** faz hoisting por ser obrigatoriamente declarada com const
+- **"this"** sempre será o objeto global. Métodos para modificar seu valor não irão funcionar
+- Não existe o objeto "Argumets"
+- O contruir (ex: new MeuObjeto()) também não pode ser utilizado
+```javascript
 
 //Geralmente é usado o const para fazer uma arrow function mas não é obrigatório pode usar outros modos de declarar variáveis
 
@@ -396,6 +401,17 @@ const sayMyName = () => {
 }
 
 sayMyName()
+
+
+const name = () => "Erick";//Forma resumida
+
+name()
+// "Erick"
+
+const number = a/*Parâmetro*/ => a
+
+number(4)
+// 4
 ```
 
 ### ***callback function :***
