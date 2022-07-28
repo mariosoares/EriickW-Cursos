@@ -123,7 +123,33 @@
     })
     ```
 
-    <br>
+***Object Destructuring***
+- Entre chaves{}, podemos filtrar apenas os dados que nos interessam em um objeto.
+```js
+const user = {
+    id:42,
+    dispayName: 'jdoe',
+    fullName:{
+        firstName:"John",
+        lastName:"Doe"
+    }
+};
+function userID({id}){
+    return id;
+}
+
+function getFullName({fullName: {firstName: first, lastName:last}}){
+    return `${first} ${last}`;
+}
+
+userId(user)//42
+
+getFullName(user)//John Doe
+```
+
+
+
+<br>
 
 - ***Array***
 - [Arquivo com mais exemplos](./Fundamentos/arrays.js)
@@ -269,6 +295,19 @@ const sum = function(num1,num2){
   console.log(num1+num2)
 }
 sum(2,3)// Arguments - Argumentos 
+
+
+function findMax(){
+    let max = -Infinity;
+
+    for(let i = 0; i< arguments.length; i++){ //O arguments é um array com todos os parâmetros passados na função qua a ela foi invocada ou seja você não necessariamente precisa colocar valores que espera ser recebido, também ajuda caso tenha muitos valores como argumentos
+        if(arguments[i] > max){
+            max = arguments[i]
+        }
+
+    }
+    return max
+}
 ```
 <br>
 
@@ -397,6 +436,115 @@ const erick = new Person("Erick");
 console.log(erick)
 ```
 
+
+### ***O que é This?***
+
+- A palavra reservada **this** é uma referência de contexto.
+- No exemplo, this refere-se ao objeto pessoa
+- Quando uma função está dentro de um objeto chamamos ela de método, então quando se usa o this ele se refere ao objeto pai desse método
+
+```js
+    const pessoa = {
+        firstName:"André",
+        lastName:"Soares",
+        id: 1,
+        fullName: function(){
+            return this.firstName + " " + this.lastName
+        },
+        getId: function(){
+            return this.id;
+        }
+
+    }
+    pessoa.fullName();
+    // "André Soares"
+    
+    pessoa.getId();
+    // 1
+
+```
+- Seu valor pode mudar de acordo com o lugar no código onde foi chamada
+
+<img src="../img/this.png">
+
+<br>
+
+***Call***
+
+```js
+const pessoa = {
+    nome: "Miguel",
+}
+
+const animal = {
+    nome: "Murphy",
+}
+
+function getSomething(){
+    console.log(this.nome);//Mas o this não iria se referir a um objeto ou função pai? Ou seja ele iria se referir a essa função getSomething()?
+}
+
+getSomething.call(pessoa);//Usando metodo .call antes da função você pode especificar qual a obj que será o pai,ou seja colocando o call você pode mostrar qual obj que o this se refira
+```
+- É possível passar parâmetros para essa fução separando-os por vírgulas.
+```js
+const myObj = {
+    num1: 2,
+    num2: 4,
+};
+function soma(a,b){
+    console.log(this.num1 + this.num2 + a + b)
+}
+
+soma.call(myObj, 1, 5)
+//Saída: 12
+```
+
+***Apply***
+
+```js
+const pessoa = {
+    nome: "Miguel",
+}
+
+const animal = {
+    nome: "Murphy",
+}
+
+function getSomething(){
+    console.log(this.nome);
+}
+
+getSomething.appy(pessoa);//funciona quase da mesma forma que o .call so com uma pequena diferença que logo veremos
+```
+- É possível passar parâmetros para essa fução separando-os por vírgulas.
+```js
+const myObj = {
+    num1: 2,
+    num2: 4,
+};
+function soma(a,b){
+    console.log(this.num1 + this.num2 + a + b)
+}
+
+soma.call(myObj, [1, 5])//É ssa é a diferença, nele é possivel passar parâmetros para a função dentro de um array
+//Saída: 12
+```
+
+***Bind***
+- Clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parâmetro
+
+```js
+const retornaNomes = function(){
+    return this.nome;
+}
+let bruno = retornaNomes.bind({nome:"Bruno"})
+
+bruno()
+
+```
+<br>
+
 ## ***Manipulando dados***
 
 ### ***Type conversion coersion***
@@ -484,6 +632,24 @@ console.log(phraseWithUnderscore )
 <br>
 
 ```js
+
+//Spread: uma forma de lidar separadamente com elementos 
+function sum(x, y, z){
+    return x + y + z
+}
+const numbers = [1, 2, 3]
+// Usando o reticências antes de uma variavel que está sendo passada como parâmetro você pode meio que separa-la indice por indice fazendo com que ela se torne um elemento idependente
+// O spread é usado quando você chama a função
+console.log(sum(...numbers));
+
+//Rest: combina os argumentos em um array
+// O que era um eleemento idependente se torna parte de um array. Funciona da forma inversa do spread
+// O rest você usa quando você delcara a função
+function confereTamanho(...args){
+    console.log(args.length)
+}
+confereTamanho(1, 2)// 2 
+
 // Contar elementos de um array
 
 let array =[2,4,5,5,6,7]
@@ -944,12 +1110,15 @@ try{
 
 ### ***for...of***
 - É um for para arrays e strings 
+- Loop enter estruturas iteráveis ou seja estruturas que possui posições 
 ```js
     let name ='Erick'
     let names = ['Gustavo','Maria','Pedro']
 
     for(let char of name){
         console.log(char)
+        //Ele irá retornar letra por letra
+        
     }
 ```
 
@@ -957,6 +1126,7 @@ try{
 
 ### for...in
 - Vai criar um loop emcima de um objeto (usando os elementos do objeto no caso)
+- Loop entre proepriedades enumeráveis de um objeto porque um objeto não possui indices/posições
 ```js
     let person ={
         name:'Jhon';
@@ -966,6 +1136,13 @@ try{
     }
     for(let property in person){
         console.log(property)
+        //saida name, age, weight
+        //Fazendo dessa forma so irá sair o nome das keys de um objeto
+    }
+      for(let property in person){
+        console.log(person[property])
+        //saida Jhon, 30, 88.6
+        //Fazendo dessa forma so irá os valores de cada objeto
     }
 ```
 
