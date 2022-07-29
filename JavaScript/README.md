@@ -1077,7 +1077,7 @@ let temperature = 38.5;
 ```js
     function sayMyName(name=""){
         if(name==""){
-            throw "Nome é obirgatório"; 
+            throw "Nome é obirgatório"; //serve para criar uma mensagem de erro personalizada
         }
         console.log("Depois do erro")
 
@@ -1087,9 +1087,14 @@ try{
     sayMyName();
 }catch(e){
     //Aqui ele guarda a mensagem de erro dentro da variavel "e"
+    //Serve para manipular o erro de forma personalizada
     console.log(e)
 }
 ```
+### Objeto Error
+
+<img src="../img/error.png">
+<img src="../img/error2.png">
 
 <br>
 
@@ -1447,6 +1452,8 @@ console.log(body.parentNode)
 const div = document.createElement("div")
 div.innerText = "Olá Devs !"
 
+
+
 // append prepend
 const body = document.querySelector("body")
 
@@ -1493,3 +1500,24 @@ input.onkeydown = function(event){
 }
 
 ```
+
+<br>
+
+<img src="../img/element.png">
+
+<br>
+
+<img src="../img/class.png">
+
+### **Tipos mais usados de eventos**
+
+- Eventos de mouse
+    - mouseover : quando o mause esta dentro da div
+    - mouseout : quando o mause sai da div
+- Eventos de clicque
+    - click : quando você clica em algo
+    - dbclick : quando você da um duplo click
+- Eventos de Atualização
+    - Change  : usado quando um campo é alterado 
+    - load
+
