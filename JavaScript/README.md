@@ -1649,3 +1649,36 @@ const displayUser = async () =>{
 dispayUser();
 
 ```
+
+## Orientação a Objetos com JavaScript (Formas de programar)
+***Imperativo (imperative)***(Falar como as coisas vao cer chamadas)
+- Como vai resolver os problemas 
+    - Precedural
+    - Object Oriented 
+    - Parallel Processing
+
+***Declarativos***
+- O que vai fazer (Banco de dados)
+    - Logic
+    - Functional : Dataflow
+    - Database
+
+**Paradigmas da orientação objeto**
+- Os programs são "objetos" que possuem uma série de propriedades.
+
+*Pilares*
+- Herança
+    - O objeto filho herda propriedades e métodos do objeto pai
+- Polimorfismo
+    - Objetos podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos
+- Encapsulamento
+    - Cada classe tem propriedades e métodos idependentes do restante do código
+- Abstração
+    - Processo mental que consiste em isolar um aspecto determinado de um estado de coias relativamente complexo, a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo
+
+
+### Protótipos
+- Todos os objetos Javascript herdam propriedades e métodos de um prototype. O Object.prototype esta no topo dessa cadeia
+- É os esqueleto de todo objeto. Ou seja todos os objetos JS vão herdar metodos de um *prototype* que é um prototipo. 
+
+### Classes
