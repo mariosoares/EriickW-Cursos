@@ -1521,3 +1521,131 @@ input.onkeydown = function(event){
     - Change  : usado quando um campo é alterado 
     - load
 
+## JavaScript Assíncrono
+- Um código assíncrono leva um tempo para ser executado, e pode ser bem sucedido ou não, funciona como se estivesse fazendo duas coisas ao mesmo tempo
+    - Chamadas para APIs
+    - Interações com banco de dados
+- Há 3 maneiras de lidar com esse tipo de código
+    - Callbacks (Uma função que é passada para ser executada em um momento mais tarde )
+    - Promises
+    - Promises com Async/Await
+
+```javascript
+// Callback 
+// setTimeout(function, milliseconds) 
+// Nesse exemplo a constante esta recebendo uma arrow function com os parametros email e password e dentro dela a função setTimeout() que recebe primeiro um arrow function como parametro e depois o tempo que ela vai receber para que o javacript espere para executa-la
+const loginUser = (email, password, callback) =>{
+    setTimeout(() =>{
+        console.log("User Logado")
+    callback ({ email })
+    }, 1500);
+}
+
+const user = loginUser("junindomorro@gmail.com","123456",(user) =>{
+
+    console.log( {user} )
+})
+
+
+```
+```javascript
+// Promises
+
+const loginUserPromises = (email, password) =>{
+    return new Promise((resolve, reject) =>{
+        const error = false
+
+        if(error){
+            reject(new Error("Error in login"));
+        }
+        console.log("User logged!")
+        resolve({email})
+    })
+}
+loginUserPromises("junindomorro@gmail.com","123456").then((user) =>{// O then traduzido significa "então" ou seja depois de ele ver a promisse ele vai executar a função recebendo os valores do "resolve" no caso a arrow func esta recebendo o vaalor do resolve o paramatro "user"
+    console.log({user})
+}).catch((error) => {//o catch pega o erro que foi dado no reject e passa para o parametro da função callback no caso o "error"
+    console.log({error})
+});
+```
+
+```javascript
+// Promises exemplo mais complexo
+
+const loginUserPromises = (email, password) =>{
+    return new Promise((resolve, reject) =>{
+        const error = false
+
+        if(error){
+            reject(new Error("Error in login"));
+        }
+        console.log("User logged!")
+        resolve({email})
+    })
+}
+
+const getUserVideos = (email) =>{
+    return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            resolve(["video1"], ["video2"]);
+        }, 2000)
+    })
+}
+
+const getVideoDetais = (video) => {
+     return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            resolve({title:"Video title"});
+        }, 2500);
+    })
+}
+
+loginUserPromises("junindomorro@gmail.com","123456")
+.then((user) =>{
+    return getUserVideos(user.email);
+}).then((videos) => {
+    getVideoDetais(videos[0])
+}).catch((error) => {
+    console.log({error})
+});
+
+```
+```javascript
+//Async/Await
+
+const loginUserPromises = (email, password) =>{
+    return new Promise((resolve, reject) =>{
+        const error = false
+
+        if(error){
+            reject(new Error("Error in login"));
+        }
+        console.log("User logged!")
+        resolve({email})
+    })
+}
+
+const getUserVideos = (email) =>{
+    return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            resolve(["video1"], ["video2"]);
+        }, 2000)
+    })
+}
+
+const getVideoDetais = (video) => {
+     return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            resolve({title:"Video title"});
+        }, 2500);
+    })
+}
+
+//É uma forma de consumir promises de forma mais facil sem precisar usar o .then varias vezes de certa forma fica mais natural e facil
+const displayUser = async () =>{
+    const user = await loginUser("junindomorro@gmail.com","123456")
+    console.log({user})
+}
+dispayUser();
+
+```
