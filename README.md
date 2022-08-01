@@ -7,5 +7,6 @@ Repositorio com conteúdos sobre o desenvolvimento Web
 - [CSS](./CSS)
 - [JavaScript](./JavaScript)
 - [Exercicios de Lógica de Programação](./)
-- [TypeScript]()
-- [React]()
+- [TypeScript](TypeScript/)
+- [Principais protocolos de comunicação da internet](./Comunicacao%20da%20internet/)
+- [React](React/)
