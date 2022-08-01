@@ -1,4 +1,8 @@
 // Precisa identificar o tipo da variavel
 const x: number = 10;
 
-console.log(x);
+function soma(a:number, b: number){
+    return a + b
+}
+
+console.log( soma(1,4)) 

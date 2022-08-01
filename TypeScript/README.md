@@ -41,6 +41,7 @@
 - any: é uma tipagem que aceita todo tipo de dado
 - union type: serve para quando uma variavel precisa receber dois tipos de dados
 - type alias: serve para criar meio que variaveis para tipos para que não aja repetição de codigo
+- interface: é um contrato que força uma classe ou um objeto (no caso do JavaScript) a implementar uma funcionalidade especifica.
 - **Obs:** Os tipos devem ser indicados com letra minuscula pois em letra maiuscula são os objetos
 
 ```typescript
@@ -68,4 +69,48 @@ let id: strimg | number = 10
 // type alias
 type myIdType = number | string
 const userId: myIdType = 10
+
+
+
+```
+```typescript
+//interface
+interface IAnimal{
+    nome: srting;
+    tipo: "terrestre" | "aquático";
+
+}
+// Você pode extender a interface animal para outra interface, como assim? Simples você pode pegar todos os elementos as Keys e os values e adiciona ao outro elemento
+
+interface IFelino extends IAnimal{//A interface IFelino vai receber Todas as Keys da interface IAnimal sem precisar passar os tipos novamente
+
+}
+
+```
+## Tratando a tag input
+- O typescript não consgue identificar uma tag html sem que seja dito a ele ou seja voê precia indicar o tipo da tag html
+- Sem especificar não pode usar os métodos do input
+```typescript
+    const input = document.getElementById("input") as HTMLInputElement;
+
+    input.addEventListener("input", (event)=>{//Até mesmo quando você vai pegar um evento você precia dizer de onde esta vindo esse evento
+        const i = event.currentTarget as HTMLInputElement;
+        console.log(i.value);
+
+    });
+
+
+```
+
+## Generic Types
+- Serve para quando não sabemos o tipo de valor que iremos receber 
+- Ou seja deixamos que o TypeScript identifique os tipos 
+- usando um <> (diamante) e dentro dele colocamos um nome para que seja usado em outro lugares
+```typescript
+function adicionarALista<T>(array: any[], valor: T){
+    return array.map(item => item + valor)
+}
+
+adicionarALista([1, 2, 3], 1)
+
 ```
