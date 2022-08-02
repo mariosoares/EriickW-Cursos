@@ -114,3 +114,23 @@ function adicionarALista<T>(array: any[], valor: T){
 adicionarALista([1, 2, 3], 1)
 
 ```
+## Definindo o tipo de retorno de uma função
+```typescript
+// Assim você pode definir o tipo que a função vai retornar
+// Isso impede que os valores que irão sair não sejam de outro tipo
+
+function calculaNumeros(number1: number, number2: number): number{
+    return number1 + number2
+}
+
+console.log(calculaNumeros(1,2))
+
+```
+## Quando usar o tipo void em funções
+```typescript
+// Ela serve quando não temos retorno de dados 
+function calculaNumeros(number1: number, number2: number): void{
+    console.log( number1 + number2)
+}
+
+```
