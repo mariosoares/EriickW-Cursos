@@ -134,3 +134,28 @@ function calculaNumeros(number1: number, number2: number): void{
 }
 
 ```
+```typescript
+// O tipo "never" é usado em uma função que nunca termina 
+
+function jogaErro(erro: string, codigo: number): never{
+    throw(error: erro, code: codigo)
+}
+
+jogaErro("DEU erro",500);
+
+```
+
+## Sinal de opcional "?"
+```javascript
+//Geralmente preciasmos verificar se existe algo no html e podemos usar um if para verificar isso mas podemos usar o "?"
+
+function adicionarNumeros(numero1: number, numero2: number){
+    return numero1 + numero2
+
+}
+
+//Colocando ele assim podemos fazer que por exemplo: Se eleexistir faça isso, senao não faça nada
+botao?.addEventListener("click", ()=>{
+   console.log(adicionarNumeros(Number(input1.value),Number( input2.value)))
+})
+```

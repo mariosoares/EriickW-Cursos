@@ -543,7 +543,7 @@ function soma(a,b){
     console.log(this.num1 + this.num2 + a + b)
 }
 
-soma.call(myObj, [1, 5])//É ssa é a diferença, nele é possivel passar parâmetros para a função dentro de um array
+soma.appy(myObj, [1, 5])//É ssa é a diferença, nele é possivel passar parâmetros para a função dentro de um array
 //Saída: 12
 ```
 
