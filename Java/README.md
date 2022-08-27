@@ -91,3 +91,9 @@ System.out.println(b)
 
 ```
 - Neste exemplo a variável **b** por estar recebendo um número inteiro ela passa a ser do tipo inteiro 
+
+## Entrada de Dados
+
+- nextInt()
+- nextLine()
+- nextDouble()
