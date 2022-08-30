@@ -9,7 +9,7 @@ public class Ex8 {
         System.out.printf("Digite seu salario: ");
         double salario = entrada.nextInt(),
                 taxa = 20,aumento = salario * (taxa/100),
-                novoSalario = salario + taxa ;
+                novoSalario = salario + aumento ;
         System.out.printf("O aumento foi de %s%n ",taxa + " porcento");
         System.out.printf("Seu salario é de %s%n ", novoSalario);
         
