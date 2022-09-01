@@ -1,0 +1,50 @@
+*{
+    font-family:'Oswald', sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    height: 100vh;
+   
+    display:grid;
+    grid-template-rows:120px 1fr 60px;/*Essa linha representa as "linhas"(divisoes) que serão feitas no html, o Primiero valor é referente ao header, o segundo ao main que ta com 1fr(Fragmento) ou seja ele vai se adptar, o terceiro referente ao footer*/
+    grid-template-columns:1fr;/*Indica o tamanho de largura que vai ocupar ou seja 1frindica a tela toda*/
+    grid-template-areas: 
+    "cabecalho " 
+    "principal " 
+    "rodape";/*Aqui ele vai indicar a sequencia de cada elemento*/
+
+}
+.cabecalho{
+    grid-area: cabecalho;/*Aqui você indica qual é a aera que esse elemnto vai ocupar com o nome que dado antes */
+    background-color: #1867c0;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 9px -2px rgba(85, 85, 85, 0.527) ;
+}
+.cabecalho > h1{
+    margin:0;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+.cabecalho >p{
+    margin:0;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+.principal{
+    grid-area: principal;
+    background:#f0f0f0;
+    height: calc(100vh - 180px);/*Esse calculo é feito para que o main so ocupe o espaço dele, colocando o valor 100vh - (header + o valor do footer)*/
+    padding:20px;
+}
+.rodape{
+    grid-area: rodape;
+    background: #fff;
+}
