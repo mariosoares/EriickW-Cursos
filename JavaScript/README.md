@@ -1459,7 +1459,7 @@ const body = document.querySelector("body")
 
 
 // o append serve para adicionar um elemento criado
-// Coloca após o script no html
+// Coloca após o a tag do html
 body.append(div)
 
 
@@ -1649,6 +1649,29 @@ const displayUser = async () =>{
 dispayUser();
 
 ```
+
+## Utiliando Módulos
+- [Pasta](./Modulos)
+- Módulos são arquivos JavaScript que tem a capacidade de exportar e importar impormações de outros arquivos do mesmo tipo
+
+### ***Algumas Vantagens são:***
+- Organização de código
+- Compratilhamento de variáveis em escopos diferentes
+- Explicita as dependencias dos arquivos
+- Boa Prática ao usar Modulos é usar a extenção .mjs para arquivos javascript que serão usado de modulos ou seja aqueles que serão exportados
+
+<img src="./img/export.png">
+
+<img src="./img/export2.png">
+
+<img src="./img/import.png">
+
+- Pra caso tiver uma função com mesmo none você pode dar um apelido ao arquivo importado
+
+<img src="./img/apelido.png">
+
+<img src="./img/import2.png">
+
 
 ## Orientação a Objetos com JavaScript (Formas de programar)
 ***Imperativo (imperative)***(Falar como as coisas vao cer chamadas)

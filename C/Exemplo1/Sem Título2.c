@@ -19,7 +19,7 @@ int main()
 	
 	inicio:
 	printf("===========================\n");
-	printf("Formulário do aluno\n");
+	printf("Formulï¿½rio do aluno\n");
 	printf("===========================\n");
 	
 	
@@ -29,7 +29,7 @@ int main()
 	printf("Digite seu E-mail: ");
 	gets(email);
 	 
-	printf("Digite seu endereço: ");
+	printf("Digite seu endereï¿½o: ");
 	gets(endereco);
 	
 	printf("Digite o nome do seu curso: ");
@@ -41,26 +41,17 @@ int main()
 	printf("Digite sua turma: ");
 	gets(turma);
 	
-	printf("Digite o seu número de telefone: ");
+	printf("Digite o seu nï¿½mero de telefone: ");
 	gets(telefone);
 	
 	system("cls");
-	printf("Seus dados estão corretos ? \n");
+	printf("Seus dados estï¿½o corretos ? \n");
 	printf("Nome: %s \n", nomeAluno);
 	printf("Email: %s \n", email);
-	printf("Endereço: %s \n", endereco);
+	printf("Endereï¿½o: %s \n", endereco);
 	printf("nomeDoCurso: %s \n", nomeDoCurso);
 	printf("Turma: %s \n", turma);
-	printf("Telefone: %s \n", telefone);
-
-	printf("Deseja refazer [1]para sim, [2] para não");
-	gets(escolha);
-	
-	if(escolha == 1 ){
-		goto inicio;
-	}else{
-		printf("digite enter para encerrar");
-	}
+	printf("Telefone: %s \n", telefone);	
 	
     return 0;
 }
