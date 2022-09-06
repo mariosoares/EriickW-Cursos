@@ -344,3 +344,125 @@ switch($cor):
  * 
  */
 ```
+
+## Operadores de Comparação
+
+```php
+
+<?php
+
+    // Operadores de Comparação
+    // ==  Igual
+    // !=  Diferente
+    // === Identico ou estritamente igual
+    // !== Não Identico ou estritamente diferente
+    // <> Diferente
+    // <  menor que
+    // > maior que
+    // <= menor ou igual a
+    // >= maior ou igual a
+    // <=> 
+
+```
+
+## Operadores Lógicos
+
+```php
+
+<?php
+
+// Operadores lógicos 
+// Nos permitem fazer comparações entre expressões 
+
+// e (&& - and) os dois operadores precisam ser verdadeiros para essa expressão seja verdadeira
+// ou (|| - or) apenas um operador precisa ser verdadeiro para que essa expressão seja verdadeira
+// ou exclusivo (xor) ´So retorna verdadiro se *somente 1 operador* for verdadeiro
+// negação (!) Ele nega o valor de um operador
+
+$idade = 19;
+$nome = "Erick";
+
+if($idade == 19 && $nome == "Erick"){
+    echo "É verdadeiro";
+}else{
+    echo "É falso";
+}
+echo "<hr>";
+
+
+if(($idade == 20 )||($nome == "Erick")):
+    echo "É verdadeiro";
+else:
+    echo "É falso";
+endif;
+
+```
+
+## While e Do While (Enquanto e Faça enquanto)
+```php
+
+<?php
+
+//While e Do While
+
+// Tanto faz você usar os dois pontos ":" ou as chaves "{}" para iniciar, ambas estão certas, mas usando os 
+// dois pontos você precisa obrigatoriamente dar o "endwhile"
+// Dependendo do que você está fazendo uma vai ser melhor que a outra
+
+/*
+ *  while(){
+ * 
+ * }
+ * 
+ */
+
+
+ $contador = 1;
+
+ //Exemplificando o que está acontecendo:
+    // Enquanto (while) o contador for menor ou igual a 10 faca o bloco de codigo abaixo
+        // Para que não fique em um loop infinito você precisa incrementar 1 no contador
+            // o While tem um unico problema, se o contador começar com o valor 10 ele simplesmente não executa
+while($contador <= 10):
+    echo "Contador é $contador";
+    echo "<br>";
+    $contador++;
+endwhile;
+
+echo "<hr>";
+
+
+$contador = 1;
+
+
+// Diferente do while o  Do while va executar o codigo pelo menos 1 vez
+do{
+    echo "Contador é $contador";
+    echo "<br>";
+    $contador++; 
+}while($contador<=10);
+
+```
+
+## For
+
+```php
+
+<?php
+
+
+for ($i=0; $i <= 10 ; $i++) { 
+    echo "O contadoor é $i <br>";
+}
+
+echo "<hr>";
+
+$cores = array ("Verde", "Vermelho", "Azul");
+
+
+// O foreach é uma estrutura de repetição que passa pelos indices do array
+foreach ($cores as $value) {
+    echo "A cor é $value <br>";
+}
+
+```
