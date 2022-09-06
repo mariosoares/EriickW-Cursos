@@ -303,5 +303,44 @@ Ela é interpretada e renderizada por um servidor (um computador que tenha o int
 ```
 ## Switch / Case
 ```php
+<?php
+    $cor = "vermelho";
 
+switch($cor):
+    case "vermelho":
+        echo "Sua cor é vermelho";
+    break;
+
+    case "verde":
+        echo "Sua cor é verde";
+    break;
+
+    case "azul":
+        echo "Sua cor é azul";
+    break;
+
+    endswitch;
+
+```
+
+## Operadores Aritiméticos
+
+```php
+
+<?php
+
+/*
+ *  Operadores Aritimeticos
+ * 
+ * São usados com valores numéricos para executar operaçoes
+ * aritiméticas comuns.
+ * 
+ * Adição +
+ * Subtração -
+ * Multiplicação *
+ * Divisão /
+ * Módulo %
+ * Exponenciação **
+ * 
+ */
 ```
