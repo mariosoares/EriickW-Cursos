@@ -466,3 +466,25 @@ foreach ($cores as $value) {
 }
 
 ```
+
+## Funções para Strings
+```php
+
+<?php
+/*
+ * FUNÇÕES PARA STRING
+ *  
+ *  strtoupper($variavel ou a string) = Serve para mandar uma string para maiusculas
+ *  strtolower($variavel ou a string) = Serve para mandar todas as letra da string para minusculas
+ * 
+ * substr($variavel ou a string , onde vai começar a string) = retorna uma parte da string a partir do caractere inicial usando a posição
+ * str_pad(@variavel, quantidade de caracteres que serão adicionados) = ela complementa uma outra string com a quantidade especificada de caracteres
+ * str_repeat("a string a ser repetida" ,  quantidade de vezes) = Serve para repetir uma string
+ * strlen() = serve para retornar o tamanho da string(Quantidades de carateres)
+ * str_replace("palavra substituida", "palavra que será trocada", "Texto"  ) = serve para substituir uma palavra em uma string
+ * strpos("string", "a palavra que voce deseja saber a posição na string") = 
+ * 
+ * 
+*/
+
+```
