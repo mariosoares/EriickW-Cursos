@@ -488,3 +488,172 @@ foreach ($cores as $value) {
 */
 
 ```
+
+## Functions
+```php
+
+<?php
+
+    function exibirNome($nome){
+
+        echo "Meu Nome é $nome";
+
+    }
+
+    exibirNome("Erick");
+
+```
+## Superglobais
+```php
+
+<?php
+
+    /*
+     * Superglobais (Variaveis pré definidas do PHP que são sempre acessiveis idenpendente do escopo)
+     * 
+     * $GLOBALS = é uma variavel para acessar variaveis globais de todo o script php, ela armazena todos as variaveis globais em um array
+     * $_SERVER =  Ela é uma superglobal que é um array que comtem que comtem em seus indices informações sobre cabeçalhos,caminhos de e script
+     * $_REQUEST
+     * $_POST = Servem para coletar dados de formularios 
+     * $_GET = Servem para coletar dados de formularios  
+     * $_FILES
+     * $_ENV
+     * $_COOKIE
+     * $_SESSION
+     * 
+     */ 
+    $x = 10;
+    $y = 20;
+     function calcula(){
+        $GLOBALS ['x'];
+        $GLOBALS ['y'];//Fazendo isso você faz com que as variaveis se tronem globais e podendo ser acessadas nesse escopo
+
+        echo $x + $y;
+     }
+
+     calcula();
+
+     echo "<hr>";
+
+
+//$_SERVER
+     echo $_SERVER['PHP_SELF']."<br>";//O indice PHP_SELF vai retornar o nome do arquivo atual 
+     echo $_SERVER['SERVER_NAME']."<br>";//Esse indice vai retornar o nome do servidor  
+     echo $_SERVER['SCRIPT_FILENAME']."<br>";//Esse indice vai retornar o caminho absoluto do arquivo atual  
+     echo $_SERVER['DOCUMENT_ROOT']."<br>";//Esse indice vai retornar o O diretorio raiz do arquivo 
+     echo $_SERVER['SERVER_PORT']."<br>";//Esse indice vai retornar a porta do servidor Web 
+     echo $_SERVER['SERVER_ADDR']."<br>";//Esse indice vai retornar o servidor IP que o usuario está usando
+     
+     echo "<hr>";
+
+    //  $_POST
+     // Para que os dados dos formulários sejam acessados é necessario dar uma propriedade name nos inputs
+     // pois somente assim  podemos identificar o input e conseguir pegar os dados que são digitados neles
+     // $variavel = $_POST["Name do input"]
+
+    /*
+    
+    <form action="dados.php" method="POST"> // O action serve para indicar o script que ira receber o valor dos  inputs dentro desse formulario 
+        Nome: <input type="text" name="nome">
+    
+    */
+
+
+     $nome = $_POST["nome"];
+    
+    
+
+```
+## Funções para números
+
+```php
+<?php
+
+    /*
+     *
+     * FUNÇÕES PARA NÚMEROS
+     * 
+     * number_format($variavel, numero de casas decimais, separador , separador de milhar) = serve para formatar um numero
+     * round() = Ele vai remover as cadas decimais não se importando com o valor
+     * ceil() = essa função vai arredondar pra cima
+     * floor() essa função vai arredondar pra baixo
+     * rand(numero inicial, numero final) = gera numeros aleatorios usando o intervalo dos numeros dados como parametro
+    */
+
+    $db = 1234.56;
+ $preco = number_format($db,2,",",".");
+ echo $preco;
+
+ echo "<hr>";
+echo rand(1,40);
+
+
+```
+
+## Filtros
+```php
+
+<body>
+    <?php
+        // Validações
+        /*
+         * Fuções (filter_input - filter_var)
+         * 
+         * filter_input(tipo do input(se ele ta no method post ou get), name do input, tipo de filtro que será aplicado) = serve para filtar um input
+         * 
+         * FILTER_VALIDATE_INT = Serve para validar se o que foi colocado é um numero
+         * FILTER_VALIDATE_EMAIL
+         * FILTER_VALIDATE_FLOAT
+         * FILTER_VALIDATE_IP
+         * FILTER_VALIDATE_URL
+         * 
+         * 
+        */
+    ?>
+<?php 
+if(isset($_POST["botao"])){ //O isset é uma ele verifica se existe algo, neste exemplo ele vai perguntar se existe o indice "botao" na variavel post
+    $erros = array();
+
+    if(!$idade = filter_input(INPUT_POST,"idade",FILTER_VALIDATE_INT)){
+        $erros[] = "Idade precisa ser um número";
+    }
+    if(!$email = filter_input(INPUT_POST,"email",FILTER_VALIDATE_EMAIL)){
+        $erros[] = " precisa ser um email valido";
+    }
+    if(!$peso = filter_input(INPUT_POST,"peso",FILTER_VALIDATE_FLOAT)){
+        $erros[] = "peso precisa ser um número";
+    }
+    if(!$ip = filter_input(INPUT_POST,"ip",FILTER_VALIDATE_IP)){
+        $erros[] = "precisa ser um ip valido";
+    }
+    if(!$url = filter_input(INPUT_POST,"url",FILTER_VALIDATE_URL)){
+        $erros[] = "precisa ser u,a URL valido";
+    }
+
+    if(!empty($erros)){//A função empty verifica se algo esta vazio ou não
+        foreach($erros as $temp){
+            echo $temp . "<br>";
+        }
+    }else{
+        echo "Parabens seus dados estão corretos";
+    }
+}
+
+
+?>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        Idade: <input type="text" name="Idade">
+        Peso: <input type="text" name="peso">
+        IP: <input type="text" name="ip">
+        URL: <input type="text" name="url">
+        <button type="submit" name="botao">Enviar</button>
+</form>
+</body>
+
+```
+##  Sanitização (Sanitize Filters)
+```
+
+
+
+```
