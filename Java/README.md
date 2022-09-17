@@ -84,9 +84,9 @@ public class PrimeiroPrograma {
 
 ```java
 
-var b = 5
+var b = 5;
 
-System.out.println(b)
+System.out.println(b);
 
 
 ```
