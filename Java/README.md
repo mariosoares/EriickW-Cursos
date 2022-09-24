@@ -97,3 +97,14 @@ System.out.println(b);
 - nextInt()
 - nextLine()
 - nextDouble()
+
+
+- variaveis estaicas = variaveis com tamanhos definidos 
+
+## Declarando variaveis em java
+
+```java
+
+    int[] num = new int[5];
+
+```
