@@ -32,3 +32,12 @@ def sacar(self, valor: float) -> None: # inicio do loco do metodo
 
 > ### *If*
 - Usa do para criar uma estrutura condicional simples, composta por um único desvio, podemos utilizar a palavra reservada if. O comando irá testar a expressão lógica, e me caso de retorno verdadeiro as ações presentes no bloco de código do it serão executadas 
+```python
+
+saldo = 2000.0
+saque = float(input("Informe o valor do saque: "))
+
+if saldo>=saque: 
+    print("Realizando saque!")
+
+```
