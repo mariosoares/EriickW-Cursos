@@ -31,7 +31,7 @@ def sacar(self, valor: float) -> None: # inicio do loco do metodo
 - A estrutura condicional permite o desvio de fluxo de controle, quando determinadas expressões lógicas são atendidas
 
 > ### *If*
-- Usa do para criar uma estrutura condicional simples, composta por um único desvio, podemos utilizar a palavra reservada if. O comando irá testar a expressão lógica, e me caso de retorno verdadeiro as ações presentes no bloco de código do it serão executadas 
+- Usado para criar uma estrutura condicional simples, composta por um único desvio, podemos utilizar a palavra reservada if. O comando irá testar a expressão lógica, e me caso de retorno verdadeiro as ações presentes no bloco de código do it serão executadas 
 ```python
 
 saldo = 2000.0
@@ -41,3 +41,20 @@ if saldo>=saque:
     print("Realizando saque!")
 
 ```
+
+> ### *if/else*
+- Para criar uma estrutura condicional com dois desvios, podemos utilizar as palavras reservadas if e else. Como sabemos se a expressão lógica testada no if for verdadeira então o bloco de código do if será executado. Caso contrario o bloco do else será executado.
+```python
+
+saldo = 2000.0
+saque = float(input("Informe o valor do saque: "))
+
+if saldo>=saque: 
+    print("Realizando saque!")
+else:
+    print("Saldo insuficiente!")
+
+```
+
+> ### *if/elif/else*
+- Em alguns cenários queremos mais de dois desvios, para isso podemos utilizar a palavra reservada elif. O elif é composto por uma nova expressão lógica, que será testada e caso retorne verdadeiro o bloco de código do elif será executado. Não existe um número máximo de elifs que podemos utilizar, porém evite criar grandes estruturas codicionais, pois elas aumentam a complexidade do código
