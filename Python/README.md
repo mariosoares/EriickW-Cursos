@@ -175,3 +175,50 @@ print(curso.center(10,"#"))
 print(".".join(curso))
 #"P.y.t.h.o.n"
 ```
+> ### Interpolação de variáveis
+
+- Em Python temos 3 formas de interpolar variáveis em strings, a primeira é usando o sinal %, a segunda é utilizando o método format e a ultima utilizando f strings
+
+> ***f-string***
+```python
+
+nome = "Erick"
+idade = "19"
+profissao = "Programador"
+linguagem = "Python"
+
+
+print("Meu nome é {}".format(nome))
+print(f" Olá, me chamo {nome}. Tenho {idade} anos de idade, trabalho como {profissao} e estou matriculado no curso de {linguagem} ")
+
+
+
+PI = 3.14159
+
+print(f"Valor de PI: {PI:.2f}")# o .2f serve para somente mostrar a quantidade de casas especificas
+```
+
+> ### Fatiamento de string
+- Fatiamento de strings é uma técnica utilizada para retornar substrings (partes da string original), informando inicio(start), fim(stop) e passo(step): `[start: stop[,step]]`
+
+```python
+
+nome = "Erick Willian Soares Afonso"
+
+nome[0] # Imprime a primeira posição da str
+# >>> "E"
+
+
+nome[:5] # fazendo isso :9 voce não indica de onde vai começar mas onde termina assim voce faz com que ele pege desdo primeiro indice
+
+
+nome[10:]# Aqui ele mostra o começo e não o fim ou seja ele vai pegar todo o resto
+
+nome[10:16]# Vai peagr o pedaço da string entre os numeros
+
+nome[10:16:2]
+
+nome[:]
+
+nome[:: -1]
+```
