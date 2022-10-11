@@ -36,7 +36,9 @@
 
 - **Segura**
     
-    Problemas como ameaças de vírus, adulteração, espionagem ou representação podem ser tratados ou minimizados usando java. E nossa construção de aplicativos usando Java também precisa de algum tipo de segurança. Por isso, a linguagem também fornece recursos de segurança para os programadores. Também existem Recursos de criptografia
+    Problemas como ameaças de vírus, adulteração, espionagem ou representação podem ser tratados ou minimizados usando java. E nossa construção de aplicativos usando Java também precisa de algum tipo de segurança. Por isso, a linguagem também fornece recursos de segurança para os programadores. Também existem Recursos de criptografia e decriptografia para proteger seus dados contra espionagem e adulteração na internet
+- **Interpretada**
+    Nas linguagens de programação, você aprendeu que eles usam o compilador ou interpretador, amas a linguagem de programação Java usa os dois. Os programas são compliados para gerar arquivos de bytecode e a JVM (Java Virtual Machine) interpreta o arquivo de bytecode durante a execução
 
 ## Paradigmas:
 - ***Funcional*** 
@@ -99,6 +101,8 @@ public class PrimeiroPrograma {
 }
 
 ```
+## Anatomia das Classes
+
 
 ## Tipos de dados 
 
