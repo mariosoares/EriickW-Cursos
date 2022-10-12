@@ -102,6 +102,111 @@ public class PrimeiroPrograma {
 
 ```
 ## Anatomia das Classes
+A escrita de códigos de um programa é feito através da composição de palavras pré-definidas pela linguagem com as expressões que utilizamos para determinar o nome do nossos arquivos, classes, atributos, e métodos.
+
+É muito comum mesclarmos expressões no idioma americano com o nosso vocabulário. Existem projetos que recomendam que toda a implementação do seu programa seja escrita na língua inglesa.
+
+**Sintaxe de declaração de uma nova classe:**
+```java
+
+public class MinhaClasse{
+    // Seu código 
+}
+```
+- Caso o arquivo/classe que você estiver criando for um arquivo que sera executado, ou seja o arquivo principal ele deve ter o metodo main
+```java
+
+public class MinhaClasse{
+   public static void main(String[] args) {
+        //Tudo que eu escrever aqui será executado, e so será usado aqui
+   }
+}
+```
+> ### Padrão de Nomenclatura
+Quando se trata de escrever códigos na linguagem Java, é recomendado seguir algumas convenções de escrita. Esses padrões estão expressos nos items abaixo:
+
+-  Arquivo **.java** : Todo arquivo .java deve começãr com letra MAIÚSCULA. Se a palavra for composta, a segunda palavra deve tembém ser maiúscula, exemplo:
+```
+    Calculadora.java
+
+    CalculadoraCientifica.java
+```
+- **Nome da classe no arquivo:** A classe deve possuir o mesmo nome do arquivo.java, exemplo
+
+```java
+// arquivo Calculadora
+
+public class Calculadora{
+
+}
+
+```
+
+- **Nome de variável :** Toda variável deve ser escrita com letra minúscula porém se a palavra for composta, a primeira letra da segunda palavra deverá ser *MAIÚSCULA, exemplo:* `ano` e `anoFabricacao`. O nome dessa prática para nomear variáveis dessa forma se chama "camelCase"
+
+    **Recomendações :** Para declarar uma variável nós podemos utilizar caracters, números e símbolos, porém devemos seguir algumas regras da linguagem.
+
+    - Deve conter apenas letras, _ (underline), $ ou os números de 0 a 9
+    - Deve obrigatoriamente se iniciar por uma letra (preferencialmente), _ ou $, jamais com númeor
+    - Deve iniciar com uma letra minúscula (boa prática - ver abaixo)
+    - Não pode conter espaços
+    - Não podemos usar palavras-chave da linguagem
+    - O nome deve ser único dentro do escopo
+
+> ### Declarando variáveis e métodos
+
+Como identificar entre declaração de variáveis e métodos em nosso programa? Existe uma estrutura para ambas finalidades
+
+**Exemplo :**
+- Declarar uma variável em Java segue a seguinte estrutura
+
+```java 
+//Estrutura
+// Tipo NomeDaVariavel = Atribuição(opcional em alguns casos)
+
+//Exemplos
+
+int idade = 23;
+double altura = 1.62;
+
+```
+- Declarando métodos em Java segue uma estrutura bem simples:
+
+```java
+//Estrutura
+//TipoRetorno NomeObjetivoNoInfinitivo parametro(s)
+
+//Exemplo
+
+int somar (int numero1, int numero2)
+
+```
+
+```java
+
+public class MinhaClasse{
+    public static void main(String[] args) {
+        String primeiroNome = "Erick";
+        String segundoNome = "Willian";
+
+        String nomeCompleto = nomeCompleto(primeiroNome,segundoNome);
+
+        System.out.println(nomeCompleto);
+    }
+
+    public static String nomeCompleto(String primeiroNome, String segundoNome) {
+        return primeiroNome.concat(" ").concat(segundoNome);
+    }
+}
+
+``` 
+> ### Identação
+
+Basicamente **Identar** é um termo utilizado para escrever o código do programa de forma hierárquica, facilitando assim a visualização do programa
+
+> ### Organizando arquivos
+
+À medida que nosso sistema vai evoluindo, surgem novos arquivos (código fonte) em nossa estrutura de arquivos de projeto. Isso exige que seja realizado uma organização destes arquivos através de pacotes (packages).
 
 
 ## Tipos de dados 
