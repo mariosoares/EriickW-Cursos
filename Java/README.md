@@ -208,18 +208,50 @@ Basicamente **Identar** é um termo utilizado para escrever o código do program
 
 À medida que nosso sistema vai evoluindo, surgem novos arquivos (código fonte) em nossa estrutura de arquivos de projeto. Isso exige que seja realizado uma organização destes arquivos através de pacotes (packages).
 
+> ### Java Beans
+
+Uma das maiores dificuldades na progrmamação é escrever algoritmos çégiveis a níveis que sejam compreendidos por todo seu time ou por você mesmo no futuro. Para isso a linguagem Java sugere, através de convenções, formas de escrita universal para nossas classes, atributos, métodos e pacotes
+
+- Variáveis
+
+    Mais cedo já aprendemos algumas regras de declaração de variáveis, mas agora iremos conhecer algumas sugestões de nomeclatura:
+
+    - Uma variável deve ser clara, sem abreviações ou definição sem sentido 
+    - Uma variável é sempre no singular, exeto quando se referir a um array ou coleção
+    - Defina um idioma único para suas variáveis. Se você for declarar variáveis em inglês, defina todas em inglês
+
+- Métodos
+
+    Os métodos deverão ser nomeados como verbos, através de uma mistura de letras minúsculas e maiúsculas. Em princípio todas as letras que compões o nome deve ser mantidas em minúsculo, com exceção da primeira letra de cada palavra composta a partir da segunda palavra.
+
+
+    **Exemplos sugeridos para nomenclatura de métodos :**
+    ```java
+
+    somar(int n1, int n2){}
+
+    abrirConexao(){}
+
+    ```
 
 ## Tipos de dados 
+  No Java, existem algumas palavras reservadas para a representação dos tipos de dados básicos que precisam ser manipulados para a construção de de programas. Estes tipos de dados são conhecidos como tipos primitivos (Primitive Types)
 
-8 Tipo de dados e seus espaços na memoria 
+> ### Os 8 tipos de dados em Java são:
 - 4 inteiros (Numeros sem ponto flutante ou sem vírgula)
-    - byte = 1 byte
+    - byte = 1 byte 
+        - Numeros que podem ser usados em byte esta entre -128 e 127 menos ou mais que isso não cabe nele
     - short = 2 bytes
+        - Numeros entre -32.768 e 32.767
     - int = 4 bytes 
+        - Numeros entre -2.147.483.648 e 2.147.483.647
     - long = 8 bytes
+        - Numeros entre -9.223.372.036.854.775.808 e 9.223.372.036.854.775.807
 - 2 reais (Números com ponto flutuante ou com vírgulas )
     - float = 4 bytes (numeros com pontos flutantes, no float precisa necessaria mente de um F no final do numero para que o java saiba que é um numero float)
+        -  Numeros entre -3,4028E + 38 e 3,4028E + 38
     - double = 8 bytes 
+        - Numeros entre -1,7976E + 308 e 1,7976E + 308
 - lógico
     - boolean (true ou false)
 - Caracteres 
@@ -239,6 +271,174 @@ System.out.println(b);
 ```
 - Neste exemplo a variável **b** por estar recebendo um número inteiro ela passa a ser do tipo inteiro 
 
+
+## Declaração de Variáveis
+
+Variável é uma identificação de espaço em memória utilizado pelo nosso programa. Seguindo as convenções em linguagem de programação, toda variável é composta por: tipo de dados + identificação + valor atribuido.
+
+**A estrutura padrão para se declara uma variável é:**
+
+***`<Tipo> <nomeVariavel> = <AtribuiçãoDeValorOpcional>`***
+
+## Declarando variaveis em java
+
+```java
+
+    int num = 20;
+    int num2;// aqui a variavel é somente iniciada
+
+
+    
+```
+
+## Variáveis e constantes
+
+Uma **variável** é uma área de memória, associada a um nome, que pode armazenar valores de um determinado tipo. Um tipo de dado define um conjunto de valores e um conjunto de operações. **Java** é uma linguagem com rigidez de tipos, difernete de linguagens como JavaScript, onde declarar o tipo de varável não é obrigatório.
+
+No java utilizamos indentificadores que representam uma referência a um valor em memória, e esta referência pode ser redirecionada a outro, sendo portanto esta a causa do nome "variavel", pois o valor pode variar.
+
+Ja as **Constantes** são valores armazenados em memória que não podem ser modificados depois que declaramos. Em Java, esses valores são representados pela palavra reservda **`final`**, seguida do tipo.
+
+Por convenção, **Constantes** são sempre em CAIXA ALTA
+```java
+
+    int numero = 5;
+
+    final double  VALOR_DE_PI = 3.14; //Constante
+
+```
+## Operadores
+
+    Símbolos especiais que tem um significado próprio paara a linguagem e estão associados a determinadas operações.
+
+Geralemente as primeires palavras que ouvimos em um curso de programação são: um programa é um conjunto de instruções lógicas que, quado executadas, produzem algum resultado. Com isso em mente, ao começar a criar as primeiras linhas de código, logo você notará que é comum receber dados do usuário, prover alguma lógica para processá-los e então apresentar o resultado desse processamento.
+> ### Operador de Atribuição
+Representado pelo símbolo de igualdade **`=`**
+
+O operador de atribuição é utilizado para definir o valor inical de uma variável ou sobrescrever o valor de uma. Em java definimos um tipo, nome, e opcionalmente atribuímos um valor através do operador de atribuição
+
+> ### Operador de Aritiméticos
+O operador aritimético é utilizado para realizar operações aritiéticas
+
+Adição `+`
+
+Subtração `-`
+
+Multiplicação `*`
+
+Divisão `/`
+
+Modulo `%`
+
+> ### Unários
+Esses operadores são aplicados juntamente com um outro operador aritmético. Eles realizam alguns trabalhos básicos como incrementar,decrementar,inverter valores numéricos e booleanos
+
+- (+) **Operador unário de valor positivo** - números são positivos sem esse operador explicitamente;
+
+- (-) **Operador unário de valor negativo** - nega um número ou expressão
+
+- (++) **Operador unário de incremento** - incrementa o valor em 1;
+- (--) **Operador unário de decremento** - decrementa o valor em 1;
+- (!) **Operador unário lógico de negação** - Nega o valor de uma expressão booleana
+> ### Operadores Relacionais
+- == : Igual
+- != : Diferente
+- <  : Menor
+- '>  : Maior
+- <=  : Menor igual
+- '>=  : Maior igual 
+
+> ### Ternário
+
+O Operador de condição Ternária é uma forma resumida para definir uma condição e escolher por um dentre dois valores. Você deve pensar numa condição ternária como se fosse uma condição IF normal, porém, de um forma em que toda a sua estrutura estará escrita numa única linha.
+
+O operador ternário é representadado pelos símbolos `?:` utilizamos na seguinte estrutura de sintaxe:
+
+    <Expressão Condicional>  ? <Caso condição seja true> : <Caso a condição seja false>
+
+
+
+> ### Lógicos
+
+Os operadores lógicos representam o recurso que nos permite criar expressões lógicas maiores a partir da junção de duas ou mais expressões.
+- && Operador Lógico "E"
+- || Operador Lógico "OU" 
+
+
+## Métodos
+Uma classe é definida por atributos e métodos. Já vimos que atributos são, em sua grande maioria, variáveis de diferentes tipos e valores. Os métodos por sua vez, correspondem a **Funções** ou **sub-rotinas** disponíveis dentro das nossas classes
+
+
+- **Critério de nomeação de Métodos**
+
+    Esse critérios não são obrigatórios, mas é recomendável que sejam seguidos pois essa convenções facilitam a vida dos programadores ao trabalharem em códigos de forma colaborativa. Ao seguir estas convenções, tornamos o codigo mais legível para nós e também para outras pessoas. Para métodos, os critérios são:
+
+    - Deve ser nomeado como verbo
+    - Seguir o padrão camelCase (Todas as letras minúsculas com a exeção da primeira letra da segunda palavra)
+
+    ```java
+        somar(int n1,int n2){}
+    ```
+
+
+    **ATENÇÃO**: Não existe em Java  o conceito de métodos globais. Todos os métodos devem SEMPRE ser definidos dentro de uma classe
+
+
+- **Critério de definição de métodos:**
+
+Mas como sabemos a melhor forma de definir os métodos das nossas classes? Para chegar à essa conclusão, somos auxiliados por uma convenção estrutural para todos os métodos. Essa Convenção é determinada pelos aspectos abaixo
+
+1. **Qual a proposta principal do método ?** Você deve se perguntar constantemente até compreender a real finalidade do mesmo
+
+2. **Qual o tipo de retorno esperado após executar o método ?** Você deveanalisar se o método será responsável por retornar algum valor ou não
+
+> Caso o método não retorne nenhum valor, ele será representado pela palavra-chave *void*
+
+3. **Quais os parâmetros serão necessários para a execução do método ?** Os métodos as vezes precisão de argumentos como critérios para a execção.
+
+4. **O método possui o risco de apresenta alguma exceção ?** Exceções são comuns na execução de métodos, as vezes é necessário prever e tratar a possível existência de uma exceção
+
+4. **Qual a visibilidade do método ?** Será necessário que p método seja visível a toda aplicação, somente em emsmos pacotes, através de herança ou somente a nível a própria classe
+
+    EXEMPLOS:
+
+```java
+
+public class myClass{
+
+    public static void main(String[] args) {
+        
+    }
+
+
+    // Os métodos devem ficar fora do main mas dentro do public class
+
+    //Como vemos devemos mostrar qual é o tipo de dado que o método deve retornar
+
+    //Usando o public o metodo fica visivel por todo o sistema
+    public double somar(int num1, int num2){
+        //finalidade do método
+
+        return ...; //É obrigatório o uso do return
+    }
+
+
+    public void imprimir(String texto){
+        // Aqui não precisa do return
+        // Pois não será retornado nenhum resultado
+    }
+    //throws Exception: indica o que o método ao ser utilizado
+    public double dividir(int dividendo, int divisor)throws Exception{}
+
+    // Esse método não pode ser visto por outas classes no programa
+    private void metodoPrivado(){
+
+    }
+} 
+
+
+```
+
 ## Entrada de Dados
 
 - nextInt()
@@ -248,10 +448,3 @@ System.out.println(b);
 
 - variaveis estaicas = variaveis com tamanhos definidos 
 
-## Declarando variaveis em java
-
-```java
-
-    int[] num = new int[5];
-
-```
