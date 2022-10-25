@@ -9,7 +9,7 @@
 - Podemos criar aplicações web, mobile(React Native), desktop (Electron)
 - Empresas famosas que usam:
     - Facebook (instagram, Whatsapp)
-    - Google (Youtube, Gmail, Drive)
+    - Google (Youtube, Gmail, Drive).
     - Uber
     - Netflix
     - TikTok
