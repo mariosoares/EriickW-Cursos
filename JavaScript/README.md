@@ -125,6 +125,27 @@
 
 ***Object Destructuring***
 - Entre chaves{}, podemos filtrar apenas os dados que nos interessam em um objeto.
+- Funciona como se tirasemos as funções do objeto
+
+```js
+
+const user = {
+    id:42,
+    dispayName: 'jdoe',
+    fullName:{
+        firstName:"John",
+        lastName:"Doe"
+    }
+};
+
+// Fazendo isso vc transforma um atributo do objeto em uma variavel fora dele
+let {id} = user;
+
+console.log(id);
+
+
+
+```
 ```js
 const user = {
     id:42,
@@ -1672,6 +1693,24 @@ dispayUser();
 
 <img src="./img/import2.png">
 
+> ### Exportando no node
+```javascript
+
+//Depois de fazer o codigo todo para exportar basta usar:
+
+function funcao(){
+    console.log("Olá mundo");
+}
+
+module.exports = { funcao };
+```
+
+> ### Importando com node:
+```javascript
+// Depois de criar um arquivo para importar ele para o arquivo principal basta usar:
+
+const funcoes = require('Caminho da pasta deve ser colocado aqui')// Isso irá retornar um objeto com todas as funções do arquivo
+```
 
 ## Orientação a Objetos com JavaScript (Formas de programar)
 ***Imperativo (imperative)***(Falar como as coisas vao cer chamadas)
@@ -1704,4 +1743,58 @@ dispayUser();
 - Todos os objetos Javascript herdam propriedades e métodos de um prototype. O Object.prototype esta no topo dessa cadeia
 - É os esqueleto de todo objeto. Ou seja todos os objetos JS vão herdar metodos de um *prototype* que é um prototipo. 
 
-### Classes
+### Classes e Objetos
+
+```javaScript
+// Coleção de dados composta por chave e valor
+const erick = {
+    nomeCompleto: 'Erick Willian Soares Afonso',
+    idade:19,
+
+    descrever: funtion () {
+        // Funções dentro de objetos são chamados de métodos
+
+        // O this diz respeito ao contexto onde essa função foi criada ou seja ja que a função 
+        //esta dentro de um objeto o this assume o objeto ou seja ele meio que vira o objeto
+        console.log(`Meu Nome é ${this.nomeCompleto} e minha idade é ${this.idade}`);
+    }
+
+};
+
+console.log(erick.nomeCompleto);
+
+// Adicionando valores dinâmicamente 
+erick.altura = 1.85;
+
+console.log(erick);
+
+//Caso você queira apagar algum dado basta usar:
+delete erick.idade;
+```
+
+> ### Classes
+
+```javascript
+
+class Pessoa {
+
+    // Uma classe é como se fosse um modelo que descreve como deve ser algo(No exemplo abaisxo uma pessoa), que serve para caso você tenha muitas instancias
+    nomeCompleto;
+    idade;
+
+    constructor(){
+        //O constructor é o que acontece quando uma pessoa é instanciada por exemplo se a pessoa não der o valor das chaves vc pode colocar um defaut 
+
+        this.nomeCompleto = 'Anonimo';
+        this.idade = 500;
+    }
+
+    descrever(){
+        console.log(`Meu Nome é ${this.nomeCompleto} e minha idade é ${this.idade}`);
+    }
+}
+// Isso é uma instÂncia (ocorrencia de uma pessoa
+const erick = new Pessoa();
+
+console.log(erick)
+```
