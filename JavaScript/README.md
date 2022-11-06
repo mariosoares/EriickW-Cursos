@@ -1798,3 +1798,14 @@ const erick = new Pessoa();
 
 console.log(erick)
 ```
+### setInterval
+
+```js
+//A função setInterval serve para você criar um intervalo de tempo onde o que esta dentro dos parenteses 
+// Vai ser executado de certa forma infinitamente caso você não tenha colocado uma parada
+
+setInterval(function(){
+    console.log("Olá Mundo")
+}, 1000)//você precisa necessáriamente passar os parametros, e o tempo de intervalo em milisegundos
+
+```
