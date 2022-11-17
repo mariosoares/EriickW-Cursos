@@ -446,6 +446,7 @@ function sayMyName (name) {
   name();
 
   console.log('Despois de executar a função callback')
+  
 }
 
 

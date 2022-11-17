@@ -379,10 +379,10 @@ switch($cor):
 // ou exclusivo (xor) ´So retorna verdadiro se *somente 1 operador* for verdadeiro
 // negação (!) Ele nega o valor de um operador
 
-$idade = 19;
+$idade = 20;
 $nome = "Erick";
 
-if($idade == 19 && $nome == "Erick"){
+if($idade == 20 && $nome == "Erick"){
     echo "É verdadeiro";
 }else{
     echo "É falso";
@@ -390,7 +390,7 @@ if($idade == 19 && $nome == "Erick"){
 echo "<hr>";
 
 
-if(($idade == 20 )||($nome == "Erick")):
+if(($idade == 21 )||($nome == "Erick")):
     echo "É verdadeiro";
 else:
     echo "É falso";
