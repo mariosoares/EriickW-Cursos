@@ -1,4 +1,4 @@
-<h1 align="center">Guia do Programador</h1>
+<h1 align="center">Guia do Programador</h1>.
 
 Repositorio com conteúdos sobre o desenvolvimento Web 
 - [Primeiros Passos](./Primeiros%20passos)
