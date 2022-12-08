@@ -1355,7 +1355,21 @@ calculateBalance()
     console.log(p)
 
 ```
+> ### Selecionando formulários
+```js
 
+// O document.forms vai retronar uma lista de formulários na pagina ou seja
+// Ele vai retornar o formulario não o que ta dentro dele
+// Vai retornar todos os formularios em formato de array
+
+//Essas tres formas selecionam o primeiro form
+const fm = document.forms[0]
+
+const fm = document.forms.item(0);
+
+const fm = document.forms.namedItem("nomeForm");
+
+```
 ## Manipulando Conteúdos 
 
 ```js
@@ -1808,5 +1822,37 @@ console.log(erick)
 setInterval(function(){
     console.log("Olá Mundo")
 }, 1000)//você precisa necessáriamente passar os parametros, e o tempo de intervalo em milisegundos
+
+```
+
+> ### Date()
+```js
+//Mostra O horario completo
+console.log(Date());
+
+//Manipular
+// Instancia o objeto date na variavel dt(Copia tudo da variavel date)
+const dt= new Date();
+
+// Pega a data do servidor ou navegador
+let dia = dt.GetDate();
+
+// Pega o mês do navegador ou servidor do site
+let mes = dt.getMonth();
+
+// Pega o ano
+let ano = dt.getFullYear();
+
+// Pega o dia da semana
+let diasem= dt.getDay():
+
+//Pega as horas
+let horas = dt.getHours();
+
+//pegas os minutos
+let minutos = dt.getMinutes();
+
+//Pegas os segundos
+let segundos = dt.getSeconds(); 
 
 ```
