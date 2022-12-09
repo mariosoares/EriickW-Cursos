@@ -1856,3 +1856,13 @@ let minutos = dt.getMinutes();
 let segundos = dt.getSeconds(); 
 
 ```
+
+> ### setTimeout e setInterval
+- Controla um espaço de tempo/intervalo
+- setTimeout(callBack,time) ele executa a função depois de um tempo expecificado (Não repete)
+- setInterval(callBack,time) ele executa a função sempre que o tempo acabar ou seja ele vai repetir sempre que o tempo acabar
+- clearInterval(variavel que tem o interval) serve para parar a exwecução do interval
+```js
+
+
+```
