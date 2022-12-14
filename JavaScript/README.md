@@ -648,6 +648,24 @@ console.log(phrase.includes("Programar"))
 
 // Observação: o .includes é case sensitive ou seja maiúsculas e minúsculas fazem diferença se colocar na frase programar em minúsculas o programa da erro
 
+
+// O metodo .match() faz quase a mesma coisa que o includes
+//Ele procura algo dentro da string
+phrase.match("Progarmar")
+
+// Mas ele pode retornar um array
+
+// Se usar um modificador vc pode alterar a forma de busca do match e ao inves de colocar aaspas vc usa /palavra/
+// Usando o `i` : Busca sem case-sensitive, ou seja, não diferencia maiúsculas de minusculas
+phrase.match(/ler/i)
+//Usando o `g`: Diz ao método para encontrar todas as ocorrencias de palavra e não parar na primeira encontrada, cada ocorrencia é armazenada em uma posição do array
+phrase.match(/ler/g)
+// Usando `m`: pesquisa normal sem armazenar em forma de array
+
+
+// Você tbm pode juntar modificadores por exemplo:
+// Fazendo isso vc vai procurar todas as ocorrencias da palavra na srting (g) e agora com o `i` vc faz com que a busca não se preocupe mais com o case-sansitive
+phrase.match(/ler/ig)
 ```
 
 <br>
@@ -664,6 +682,23 @@ let myArray = phrase.split(" ")
 // O metodo .join serve para unir arrays e dentro do parenteses fica qual será o separador
 let phraseWithUnderscore = myArray.join("_")
 console.log(phraseWithUnderscore )
+
+
+// Metodo toString, ele é usado para converter algo e uma string 
+// Mas ele tem uma função diferente, que é converter bases (decimal, binario, octal, hexadecimal)
+num = 15
+
+let res=num.toString()
+let bin=num.toString(2)
+let oct=num.toString(8)
+let hex=num.toString(16)
+
+
+// Camando .trim() ele vai apagar espaços antes e depois
+let frase= "          Olá mundo !!    "
+
+let res=texto.trim()
+alert(res); 
 
 ```
 
@@ -1863,6 +1898,26 @@ let segundos = dt.getSeconds();
 - setInterval(callBack,time) ele executa a função sempre que o tempo acabar ou seja ele vai repetir sempre que o tempo acabar
 - clearInterval(variavel que tem o interval) serve para parar a exwecução do interval
 ```js
+
+
+```
+
+> ### Recurssividade
+- é quando voce tem uma função que chama a si mesma, é geralmente usada para substituir laços de repetição 
+
+```js
+
+function contador(min,max){
+    document.write(min+"<br>");
+    if(min<max){
+        contador(++min,max)
+    }
+}
+contador(0,10)
+```
+
+> #### Formatação Condicional
+```
 
 
 ```
