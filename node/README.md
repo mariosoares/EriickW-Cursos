@@ -45,7 +45,13 @@ const myModule = require('./modulo.js')
 ```
 
 > ## Pegando informações do processo 
+- Atenção para adicionar valores no process deve se tomar cuidado pois você precisa indicar qual o arquivo vai receber novos valores no array do process
 
+- No terminal fica assim:
+
+        node importFlag.js --name "erick"
+
+- Sempre lembre node nomedoArquivo.js  flag  valorDesejado
 ```js
 //vai retornar lista de argumanto que está rodando no node
 console.log(process.argv)
@@ -61,3 +67,28 @@ console.log(process.argv)
 
 node process --name "Erick Willian"
 ```
+
+> ## NPM - Node Package Manager
+
+__Glossary: Dependencies, Packages, Modules__
+
+- [ ] Verificar se tem o npm instalado `npm -v`
+- [ ] Criar nosso próprio pacote
+
+    Para iniciar os pacotes do node você te duas opções:
+
+    1 - `npm init`
+
+    2 - `npm init -y ` praticamente igual ao de cima mas da sim para todas as opções de config inicial
+
+- [ ] O que é o arquivo package.json
+
+    é um arquivo .json (JavaScript object notation) ao abrir ele você vai perceber que ele é um objeto javascript com chave e valor,     caso você você altere algo no package.json você obrigatóriamente precias digitar no terminal ` npm update`
+
+- [ ] Utilizar módulos terceiros 
+
+    Para baixar packages de terceios basta ir no terminal e escrever `npm install (Nome do package)` 
+
+- [ ] O que é o diretório node_modules
+- [ ] O que é o arquivo package-lock.json
+- [ ] Criar scripts para rodar com o npm
