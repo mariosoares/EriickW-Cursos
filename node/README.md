@@ -130,3 +130,66 @@ __Glossary: Dependencies, Packages, Modules__
     - Para aumentar para a mais atual novamente `npm i nomePacote@latest` 
 
 - [ ] Rmovendo Pacotes `npm unistall (nome do pacote)`
+
+
+# Desafio : Best me App
+
+- Encontre sua melhor versão!
+- Use o App ao final de cada dia para refletir sobre sua jornada
+
+## O que vamos aprender ?
+
+A se comunicar com o processo enquanto ele estiver rodando
+
+[ ] process.stdout / process.stdout.write("string") : funciona como uma saida de dados padrão 
+
+[ ] process.stdin 
+
+* Assincronismo 
+
+```js
+    //process.stdin serve para entrada de dados
+    process.stdin.on("data", data =>{// o .on serve como um escutador e o que ele vai ficar atento se chama "data" e toda vez que tiver sendo inserido dados ele vai executar uma função
+        process.stdout.write("Salvo")
+        let frase = data;
+        process.stdout.write(frase)
+
+        process.exit()// Sem isso ele nunca vai parar de excutar a entrada de dados 
+    })
+
+```
+
+# Timers
+
+Uma maneira de trabalharmos com tempo dentro do NodeJS
+
+**[ ]** - *setTimeout*
+
+**[ ]** - *clearTimeout*
+
+**[ ]** - *setInterval*
+
+**[ ]** - *clearInterval*
+
+## Nisso irá praticar um pouco mais de:
+[ ] Assíncronismo
+
+[ ] Callbacks
+
+
+# Event Module
+
+É um mecanismo para
+
+- [ ] Disparar eventos 
+- [ ] Ouvir eventos
+- [ ] Fazer alguma ação quando ouvir o evento
+- [ ] é a base para muito outros módulos como: http, stream, file system, etc
+
+> ## O que vamos aprender ?
+
+- Utilizar os eventos 
+- Disparar eventos 
+- Ouvir evnetos 
+- Executar ações para determinados eventos 
+- Entender como ele é base para os outros módulos
