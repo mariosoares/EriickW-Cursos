@@ -33,7 +33,7 @@
 
 **Maneira correta :** 
 ```js
-    console.log("Olá, Mundo"); // O console.log('') serve para escreveruma mensagem no console do navegador
+    console.log("Olá, Mundo"); // O console.log('') serve para escrever uma mensagem no console do navegador
 ```
 
 **Maneira errada ( Se esquecer de um ponto sequer o programa da erro)**
@@ -224,9 +224,9 @@ getFullName(user)//John Doe
 {
     // aqui dentro é um bloco e posso colocar qualquer código
 
-} // aqui dechamos o bloco
+} // aqui fechamos o bloco
 ```
-- O bloco , també criará um novo escopo. Chamamos de `block-scoped`
+- O bloco , criará um novo escopo. Chamamos de `block-scoped`
 
 ### ***var***
 
@@ -380,7 +380,7 @@ study
 ```js
 sayMyName()
 
-// No JavaScript (e outras linguagens de programação) as funções que são chamadas antes recebem um hoisting que siginifica "elevação" ou seja quando o programa iniciar ele vai "jogar" a função pra cima de todo o código fazemdo com que essa opção de chamar a função antes seja possivel
+// No JavaScript (e outras linguagens de programação) as funções que são chamadas antes recebem um hoisting que siginifica "elevação" ou seja quando o programa iniciar ele vai "jogar" a função pra cima de todo o código fazendo com que essa opção de chamar a função antes seja possivel
 function sayMyName(){
   console.log("Erick")
 }
@@ -408,7 +408,7 @@ let sayMyName = function sayMyName(){
 ### ***Arrow Function :***
 - Maneira mais moderna e compacta de escrever uma função
 - Caso exista apenas uma linha, pode dispensar as chaves e o return
-- Casi exista apenas um parÂmetro pode dispensar os parêntese
+- Caso exista apenas um parÂmetro pode dispensar os parêntese
 - Arrow function **NÃO** faz hoisting por ser obrigatoriamente declarada com const
 - **"this"** sempre será o objeto global. Métodos para modificar seu valor não irão funcionar
 - Não existe o objeto "Argumets"
