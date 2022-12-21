@@ -376,6 +376,17 @@ study
 
 <br>
 
+### IIFE : Imnmediately Inkoked Function Expression
+
+``` js
+// Função auto invokavel
+(function(){
+    console.log("Ola mundo!!")
+})()
+
+```
+ 
+
 ### ***Function hoisting :***
 ```js
 sayMyName()
@@ -464,8 +475,18 @@ sayMyName(
 
 ```js
 //Funciona como um objeto usando a palavra chave "new" você cria o objeto, para criar "Caracteristicas" basta usar a palavra chave "this"
+// São funções que instanciam objetos em variaveis
+
 
 function Person(name){
+
+    // Variaveis que são criadas na função não podem ser usadas em variaveis que foram instanciadas por exemplo:
+    let nome = "Erick" // Isso não pode ser usado quando for instanciar tipo variavel.nome isso não vai funcionar 
+
+
+   // Para você atribuir uma chave e valor a variavel instanciada você faz isso:
+   // Usando this ele vai se refenrenciar a variavel que está recebendo
+
   this.name = name
 } 
 
@@ -473,9 +494,92 @@ const erick = new Person("Erick");
 
 console.log(erick)
 ```
+### Tipos de declaração de funções 
+```js
 
+//Function declaretion
+// Usando essa forma de escrever a função você consegue usar a função antes do código da função
+function soma(x,y){
+    return x+y
+}
+
+// Function expression
+// Essa não pode ser chamada antes de ser declarada
+const sub = function(x,y){
+    return x-y
+}
+
+// Named function expression
+
+const mult = function mult(x,y){
+    return x*y
+}
+
+// 
+
+```
+
+### Contexto Léxico
+```JS
+
+//É quando a as coisas mudam dependendo do contexto onde ele é declarado por exemplo
+
+const valor = "Global"
+
+function minhaFunc(){// No javasrcipt as funções salvam onde elas foram declaradas, nesse caso ela foi declarda de forma global e ela so irá usar as variaveis que foram delcaradas dentro do seu excopo
+    console.log(valor)
+}
+
+function imprime(){
+    const valor = "Local"
+    minhaFunc() // se a função for chamada dentro de outra ela não poderá usar as variaveis que estão dentro da outra a não ser que seja passada como parametro
+    // Nesse caso ira imprimir Global pois o contexto da função minhaFunc() é global e ela so ira usar as globais
+}
+
+```
+
+### Closures
+
+***É o escopo criado quando uma fução é declarada. Esse escopo permite a função acessar e manipular variáveis extrernas à função***
+
+### Função Factory
+ ***Função que retorna sempre um novo objeto***
+
+```js
+function criarPessoa(){
+    return {
+        nome:"Erick",
+        sobrenome:"Willian"
+    }
+} 
+
+
+// podemos fazer assim para gerar valores personalizados
+function criarPessoa(nomePessoa,sobremomePessoa){
+    return {
+        nome:nomePessoa,
+        sobrenome:sobremomePessoa
+    }
+} 
+
+//Essa é outra forma 
+/*
+
+function criarPessoa(nome,sobremome){
+    return {
+        nome, fezndo isso você não precisa dizer qual a key o proprio javascript ja coloca o nome da variavel
+        sobrenome
+    }
+} 
+
+*/
+
+let pessoa1 = criarPessoa("Erick","Willian")
+
+```
 
 ### ***O que é This?***
+
 
 - A palavra reservada **this** é uma referência de contexto.
 - No exemplo, this refere-se ao objeto pessoa
@@ -503,9 +607,38 @@ console.log(erick)
 ```
 - Seu valor pode mudar de acordo com o lugar no código onde foi chamada
 
-<img src="../img/this.png">
-
 <br>
+
+ ### Classe vs Função Factory
+
+```js
+// para declarar uma classe:
+class Pessoa{
+    constructor(nome){//o constructor é uma função que quando essa classe for instanciada em uma variavel os parametros dela dever ser passados obrigatoriamente 
+
+        this.nome = nome
+
+    }
+
+    falar(){
+        console.log(`Meu nome é ${this.nome}`)
+    }
+}
+
+const p1 = new Pessoa("Erick")
+
+p1.falar()
+```
+```js
+
+const pessoa = nome =>{
+    return{
+        falar:()=> console.log(nome)
+    }
+}
+
+```
+
 
 ***Call***
 
@@ -520,7 +653,7 @@ const animal = {
 
 function getSomething(){
     console.log(this.nome);//Mas o this não iria se referir a um objeto ou função pai? Ou seja ele iria se referir a essa função getSomething()?
-}
+}Leviathan Dragon
 
 getSomething.call(pessoa);//Usando metodo .call antes da função você pode especificar qual a obj que será o pai,ou seja colocando o call você pode mostrar qual obj que o this se refira
 ```
