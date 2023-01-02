@@ -1,0 +1,8 @@
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\bin\Debug\Enumeradores.exe.config
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\bin\Debug\Enumeradores.exe
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\bin\Debug\Enumeradores.pdb
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\obj\Debug\Enumeradores.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\obj\Debug\Enumeradores.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\obj\Debug\Enumeradores.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\obj\Debug\Enumeradores.exe
+C:\Users\USER\Desktop\Cursos\C#\Enumeradores\Enumeradores\obj\Debug\Enumeradores.pdb

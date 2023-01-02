@@ -138,3 +138,95 @@ class Inimigo:MonoBehaviour{
 }
 
 ```
+
+## Formatando saidas:
+
+```c#
+string produto = "Copo";
+// Fazendo assim você pode formatar o texto
+// Colocando variaveis no meio dentro das chaves você indica o indice da variavel 
+// Que sempre vai estar fora das aspas
+Console.WriteLine("Produto.......:{0}",produto);
+
+//Mas e agora? o que é esse 15
+// Simplesmente a quantidade de espço que será dado
+Console.WriteLine("Produto.......:{0,15}",produto);
+
+```
+## Recebendo valores do teclado:
+
+```c#
+string nome;
+
+// Console.ReadLine() ele para o script e fica esperando o usuario digitar algo
+nome = Console.ReadLine();
+
+
+
+```
+## Conversão de valores:
+
+```c#
+
+// Aqui eu to recebndo o valor e estou convertendo para um tipo inteiro
+int v1;
+v1 = int.Parse(Console.ReadLine());
+```
+## Operadores lógicos:
+
+- | = operador lógico de OU
+- & = operador lógico de E
+- ! = operador lógico de NEGAÇÃO
+
+## Operações de Bitwise
+- De certa forma esse operadores dobram um valor e cortam ele pela metade
+- **<<** = Esse sinal dobra o valor
+- **>>** = Esse corta pela metade
+
+> *Entretanto a forma correta é: *
+
+**O valor em binario vai ser deslocado, como assim?**
+
+*Supondo que temos o valor de 10 em binario ele é 1010 mas para entender vamos colocar assim: 00001010, então:*
+
+- **<<** = Esse vai deslocar os 5 ultimos bits para a esquerda, caso fique um "buraco" faltando numeros você coloca 0 assim:
+
+    00001010 << 1    
+
+    **Fica Assim: 00010100**
+
+    e o valor de 00010100 é 20 dobrando o valor
+
+- **>>** = Esse vai deslocar os 5 ultimos bits para a direita, caso fique um "buraco" faltando numeros você coloca 0 assim:
+
+    00001010 << 1    
+
+    **Fica Assim: 00000101**
+
+    e o valor de 00000101 é 5 metade do valor
+```c#
+
+int num1 = 10;
+
+//Fazendo assim ele executa a operção de Bitwise 1 vez
+num1 = num1 << 1;
+
+```
+## Enumeradores (enum)
+- Básicamente é um recurso que nos permite criar um tipo próprio com valores pré definidos
+- Funciona como um objeto com valores constantes que podem ser atribuidos a variaveis dessa forma:
+```c#
+
+ class Program
+    {
+        enum Nen { Conjuração, Manipulação, Emissão, Transmutação, Aprimoramento,Especialização };
+        static void Main(string[] args)
+        {
+            Nen Killua = Nen.Transmutação;
+            Console.WriteLine("Killua: " + Killua);
+            Nen Gon = Nen.Aprimoramento;
+            Console.WriteLine("Gon: " + Gon);
+        }
+    }
+
+```
