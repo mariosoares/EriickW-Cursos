@@ -230,3 +230,19 @@ num1 = num1 << 1;
     }
 
 ```
+## Conversões de tipos (typecast) 
+
+```c#
+
+ class Program
+    {
+        static void Main(string[] args)
+        {
+           int vInt = 10;
+
+           // Fazendo assim você converte o int em short
+           short vShort = (short)vInt;
+        }
+    }
+
+```
