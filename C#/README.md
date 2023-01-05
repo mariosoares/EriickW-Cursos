@@ -246,3 +246,46 @@ num1 = num1 << 1;
     }
 
 ```
+## Arrays
+
+```c#
+
+//Declarando 
+
+int[] numeros = {10,20,30,40};
+
+// Fazendo desta forma você indica o tamanho do array
+string nomes = new string[5];
+// Imprimindo
+Console.WriteLine(numeros[1]);
+
+// Imprimindo na unity
+
+print(numeros[2]);
+Debug.Log(numeros[2]);
+
+```
+## foreacch
+
+```c#
+int[] numeros = {10,20,30,40};
+
+// a cada interação ele vai pegar cada posição do array numero e vai colocar uma posição de cada vez no I
+foreach(int i in numeros){
+
+}
+
+```
+
+## LISTAS E COLEÇOES DE ELEMENTOS 
+
+```c#
+// Assim você cria uma lista colocando List pra começar uma
+// <tipo de dados da lista>
+// nome da lista
+// depois você intancia uma lista
+List<int> numeros = new List<int>();
+
+
+
+```
