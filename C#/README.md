@@ -286,6 +286,40 @@ foreach(int i in numeros){
 // depois você intancia uma lista
 List<int> numeros = new List<int>();
 
+void start(){
 
+    // Para adicionar dados em uma lista basta uasr o metodo .Add
+
+    numeros.Add(12);//A lista pode ser acessada igual a um array usando indices
+    numeros.Add(5);
+
+    numeros.Remove(5);// Removendo o numero 5
+    numeros.RemoveAt(1);// Removendo o numero na posição 1 que seria tabem o 5
+
+    numeros.Sort();// Esse metodo vai organizar a lista de forma crescente
+
+
+    numeros.Clear();// Serve para apagar tudo que está na lista
+
+    numeros.IndexOf(1);//Você coloca o elemento que está procurando e ele manda o indice dele na lista
+
+    int tamanhoLista = numeros.Count;// Assim você consegue o tamanho da lista
+}
+
+```
+
+## COLEÇÃO DICTIONARY / DICIONARIOS 
+
+```c#
+// É um pouco semelhante a estrutura de objetos em JavaScript
+
+// Para iniciar um dicionario basta fazer desta forma:
+Dictionary<string,string> viloes = new Dictionary<string,string>();
+//Dictionary<tipoDaKey,tipoDoValue> 
+
+
+// Para adicionar valores ao dicionario é igual ao da lista
+// viloes.add(key,value);
+viloes.add("Slime","Poison" + "Força: 100");
 
 ```
