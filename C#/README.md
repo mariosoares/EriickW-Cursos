@@ -322,4 +322,7 @@ Dictionary<string,string> viloes = new Dictionary<string,string>();
 // viloes.add(key,value);
 viloes.add("Slime","Poison" + "Força: 100");
 
+// Para acessar
+print(viloes["Slime"]);
+
 ```
