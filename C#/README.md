@@ -326,3 +326,156 @@ viloes.add("Slime","Poison" + "Força: 100");
 print(viloes["Slime"]);
 
 ```
+
+## Classes
+- Uma classe é uma forma de definir um tipo de dado em uma linguagem orientada a objeto. Ela é formada por dados e comportamentos.
+
+- Para definir os dados são utilizados os atributos, e para definir o comportamento são utilizados métodos. Depois que uma classe é definida podem ser criados diferentes objetos que utilizam a classe. 
+-  bastando declarar uma variável com o tipo da classe e com a palavra reservada *new* criar um novo objeto.
+```c#
+//Para declarar classes basta fazer isso:
+// É uma boa prática colocar a primeira letra da classe em maiusculo
+class Vampiros{
+    private string nome;
+
+    void setNome(string name){
+        this.nome = name
+    }
+}
+
+
+```
+
+## Herança
+- A herança é um mecanismo da Orientação a Objeto que permite criar novas classes a partir de classes já existentes, aproveitando-se das características existentes na classe a ser estendida. Este mecanismo é muito interessante, pois promove um grande reuso e reaproveitamento de código existente.  Com a herança é possível criar classes derivadas, subclasses, a partir de classes bases, superclasses. As subclasses são mais especializadas do que as suas superclasses, mais genéricas.
+
+```c#
+class Inimigo{
+    private string nome;
+    private float dano;
+    private float speed;
+    
+
+    public void setNome(string name){
+        this.nome = name
+    }
+}
+
+// Assim você faz uma classe herdar outra 
+// Fazndo isso tudo que esta na outra classe é copiado para essa
+// Entretanto para poder usar coisas de outra  classe elas tem que estar publica
+class Vampiro : Inimigo{
+
+}
+
+```
+
+## Unity
+- Pegando Um objeto na Unity
+```c#
+
+//para você achar um objeto na unity e referenciar em uma variavel 
+// Basta usar assim:
+    // Para declarar um gameOject
+    private GameObject Player;
+    public GameObject enemyObject;
+
+    private void main(){
+        // Assim ele acha o objeto com nome player
+        player = GameObject.Find("Player");
+    }
+
+```
+
+- Coisas legais como mover um personagem
+```c#
+
+    public void followPlayer(){
+        Main();
+        // Use o Vector3.MoveTowards para movimentar os obj em 3d
+        // Use o Vector2.MoveTowards para movimentar os obj em 2d
+        //Vector3.MoveTowards(posiçãoInicial,posiçãoFinal, velocidade * Time.deltaTime)
+        enemyObject.transform.position = Vector3.MoveTowards(enemyObject.transform.position,Player.trasform.position, speedEnemy * Time.deltaTime);
+    }
+
+```
+```c#
+
+//para refenciar o "inimigo" no jogo 
+// basta cirar um novo arquivo e instanciar a classe assim
+// A classe pode se chamar Enemies
+Enemies inimigo = new Enemies();
+
+void Start(){
+    // assim quando você vincular o srcipt c# em um objeto unity 
+    // O this vai se refenciar a ele, e o inimigo.enemyObject vai receber o gameObject[
+
+
+        
+    
+    inimigo.enemyObject = this.gameObject;
+}
+
+```
+
+## Static
+- Na verdade um Membro Estático funciona de forma semelhante a um método "comum". A maior vantagem de utiliza-lo é que não precisamos instanciar a classe para poder utiliza-lo.
+
+## Método Construtor
+
+- Método Construtor ou função construtora ele é chamado no momento do objeto, ele serve para inicializar os vvalores das varivaveis
+
+```C#
+
+
+
+class Vampiro{
+    public forca;
+// Para criar um contrutor você presia crialo dentro da classe
+    public Vampiro(int forca1){
+        forca = forca1;
+    }
+}
+
+// E quando for instanciar um objeto com a classe basta passar os atributos nos parentes
+
+Vampiro Dracula = new Vampiro(forca1);
+
+```
+
+## This e Base
+- O this se refere ao objeto/classe no qual ele  foi chamado
+
+```c#
+
+public class Pessoas{
+    string nome;
+
+    void setNome(string nome){
+
+        // O this ele meio que vai "copiar" toda a classe pra ele fazendo entaõ ser possivel acessar o nome do lado de fora da funnção
+        // Sem o this fica ass Pessoas.nome = nome
+        this.nome = nome;
+    }
+}
+
+```
+
+- Ja o base serve meio que para referenciar classe diferentes, ou seja é uasdo geralmente para pegar variaveis de outras classes
+
+```c#
+
+
+
+public class Inimigo{
+    public string nome;
+
+}
+
+public class Orc : Inimigo{
+    void ataque(int velocidade){
+        base.velocidade = velocidade
+    }
+}
+
+```
