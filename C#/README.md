@@ -479,3 +479,134 @@ public class Orc : Inimigo{
 }
 
 ```
+
+## Sobrecarga De Métodos
+
+- Geralmente é usado quando queremos criar um método e depois queremos fazer variações dessse mesmo metodo
+
+```c#
+public class calculadora{
+
+    public int soma(int a, int b){
+        return a + b
+    }
+    // fazendo assim você crai uma variação da mesma funçao que so altera o tipo de dados do param
+    public int soma(float a, float b){
+        return a + b
+    }
+
+
+    // Mas como fica  na hora de chamar?
+    // A reposta é normalmente, ele vai so trocar de função quando os parametros forem diferentes
+    soma(a,b)
+
+}
+
+```
+
+## Sobrescrita de Métodos - (Virtual Override)
+
+- Serve para sobrescrever um método, mas como assim?
+- Simples, vamos supor que você tem o metodo de uma classe e  quer que outra classe herde esse método, entretanto você quer que esse mesmo metodo tenha algo diferente basta fazer assim:
+
+```c#
+
+public class Monstro{
+    // O virtua serve para que o método possa ser sobrescrito na classe descendente (que herda da classe principal)
+    public virtual void Ataque(){
+        //funcionalidades do metodo
+    }
+}
+
+public class Gosma : Monstro{
+    // Um método override fornece uma nova implementação de um membro herdado de uma classe
+    // é necessário para estender ou modificar a implementação abstrata ou virtual de um método
+    public override void Ataque(){
+        // aqui dentro você chama a função original
+        base.Ataque();
+
+        //e embaixo vc coloca mais funcionalidades
+    }
+
+}
+
+```
+
+
+## Modificadores de Acesso : Public vs Private
+
+- Public : Serve para dar acesso livre a variavel, classe , funções, o acesso livre se refere que quando a classe detentora da variavel publica for herdada por outra essa vai ter acesso a variavel
+
+- Private : essa são privadas elas não podem ser acessada por outas classes
+
+
+## Modificador de Acesso Protected
+
+- Serve para impedir que outras classes que não herdaram de outra acesse uma variavel
+
+```c#
+public class Numeros{
+    protected int num1;
+}
+
+public class Acesso1:Numeros{
+    //classes herdadas podem acessar variaveis portected
+    num1= 10;
+}
+public class Acesso2{
+     //classes não herdadas não podem acessar variaveis portected
+    num1=1;
+}
+
+
+```
+
+## Modificador De Parâmetro Ref e Passagem Por Refêrencia
+
+- É uma forma de econimizar memoria, para otimizer apps ou jogos
+- Sempre que você cria uma função pedindo parametros ela sempre vai criar um espaço novo na memoria então para resolver isso 
+- Usando os metododos de referencia o compilador não vai armazenar os dados em outros locais mas vai pegar o locar de memoria da variavel passada como parametro
+- Observação: se você alterar o valor da variavel usada como parametro você altera a original
+```c#
+
+int numero = 10;
+
+void iniciar(){
+
+    // Quando você for chamar a função e passar parametros você 
+    // precisa passar a diretiva ref 
+    exemplo(ref numero);
+}
+
+// Usanodo ref na criação da função você deixa explicito que 
+// ira usar uma referenci e que o compilador não crie
+// outro espaço na memoria
+void exemplo(ref int n){
+    print(n);
+}
+
+
+
+```
+
+## Modificadores de Parâmetros: Argumento Out
+- O out é usado quando queremos mandar varios returns em uma função
+
+```c# 
+
+void iniciar(){
+    int soma,sub;
+
+
+    // Ai quando você for chamar a função voce precisa passar qual a variavel que vai armazenar a variavel do out
+    calculadora(1 , 3 , out sub)
+
+}
+// Você precisa expecificar qual será a outra saida pelos parametros usando o out
+void calculadora(int a , int b , out int sub){
+    sub = a-b;
+    return a+b;
+}
+
+
+```
