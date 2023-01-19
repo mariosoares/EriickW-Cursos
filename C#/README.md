@@ -610,3 +610,63 @@ void calculadora(int a , int b , out int sub){
 
 
 ```
+
+## Modificadores de Parâmetros: Argumento Params (Passagem Multidimensional)
+- Da a passar varias informações como parametro e todas as informações são armazendads em um array é não precissa saber o tamanho do array
+
+```c# 
+
+int SomaNumeros(params int[] array ){
+    int result = 0;
+
+    for(int i= 0;i< array.Length;i++){
+        result += array[i];
+    }
+
+    return result;
+}
+
+
+```
+## Ramdom.Range
+- É um comando para gerar numeros randomicos
+- Ramdom.Range(numeroInicial,Numerofinal)
+
+## Comando Goto
+- Serve para levar a execução para partes do código
+
+```c#
+
+//para indicar onde o goto deve ir basta fazer assim
+pontoInicial:
+
+//Assim você faz para usar o goto
+goto pontoInicial
+
+
+```
+
+## Classes e Métodos Abstratos
+- calsses abstratas Serve para referencia para outras classes que herdem dessa classe serve como se fosse um molde
+- metodos abstratos você não consegue fazer uma implementação dele na classe que foi criado, e todo metodo abstrato precisa necessariamente ser implementado na classe herdada
+```c#
+
+public abstract class Viloes{
+    public float forca,velocidade;
+
+    public Viloes(){
+        forca=100;
+        velocidade=50;
+    }
+
+    // Funciona como vc tivesse apenas declarrando a função
+    abstract public void ataque();
+}
+
+public class Bane:Viloes{
+    // e para implementar basta usar o override para sobrescrever a função
+    override public void ataque(){
+
+    }
+} 
+```
