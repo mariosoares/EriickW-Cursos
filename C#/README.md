@@ -647,14 +647,14 @@ goto pontoInicial
 ```
 
 ## Classes e Métodos Abstratos
-- calsses abstratas Serve para referencia para outras classes que herdem dessa classe serve como se fosse um molde
+- classes abstratas Servem de referencia para outras classes que herdem dessa classe, serve como se fosse um molde
 - metodos abstratos você não consegue fazer uma implementação dele na classe que foi criado, e todo metodo abstrato precisa necessariamente ser implementado na classe herdada
 ```c#
 
 public abstract class Viloes{
     public float forca,velocidade;
 
-    public Viloes(){
+    public void Viloes(){
         forca=100;
         velocidade=50;
     }
@@ -669,4 +669,38 @@ public class Bane:Viloes{
 
     }
 } 
+```
+
+## Classe Sealed(Classe selada)
+- Esse tipo de classe não pode ser herdada por outras classes
+```c#
+
+sealed class A{
+
+}
+
+
+``` 
+
+## Struct / Estruturas
+
+- É um tipo é usado para armazenar varios tipos de informações
+- Deve ser criado fora da classe
+
+```c#
+
+// Para Fazer uma variavel receber o struct
+
+Vilão Bane;
+
+
+// Para acessar 
+Bane.forca = 20;
+
+
+// Para criar um struct 
+public struct Vilão{
+    public int forca=10;
+}
+
 ```
