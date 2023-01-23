@@ -704,3 +704,138 @@ public struct Vilão{
 }
 
 ```
+
+## Interfaces
+- Para a criação de uma interface é igual a uma classe sempre fora de outras classes
+- Como boa prática é usado o "I" antes do nome da interface
+- Ele é usado para criar metodos abstratos e depois é possivel implementar em classes
+- Usado geralmente usado para criar implementações que podem substituir multiplos if's
+- Funciona como uma herança(Mas não é chamado herança e sim contrato, por exemplo a classe faz um contrato com a interface) ele passa as funções abstratas para a classe e a mesma é obrigada a implementar todas as funções 
+
+```c#
+
+public interface IInteracoes{
+    void atacar();
+}
+
+// Assim voce faz o contrato de uma interface
+public class Inimigo:IInteracoes{
+    public void Interacoes(){
+        //Implementação do código
+    }
+}
+
+```
+
+- Supondo que você queira passar parametros você faz assim
+
+```c#
+
+// Entre <nome do parametro>
+public interface IInteracoes<I>{
+    void atacar(float I);
+}
+
+
+//Quando for realizado o contrato voce precisa indicar o tipo da variavel
+public class Inimigo:IInteracoes<float>{
+    public void Interacoes(float game){
+
+    }
+}
+
+```
+
+## Delegates
+- Ele é geralmente usado com eventos 
+- Serve para fazer referencia ao um metodo 
+- Serve para armazenar funções em uma variavel
+```c#
+// Assim você inicia um delegate, de certa forma o exemploDel() vira um tipo
+// É necessário que você coloque o tipo de retorno e a função que a variavel vai receber deve ser do mesmo tipo
+delegate void exemploDel();
+
+// Assim voce faz com que a variavel seja possivel receber funções
+exemploDel variavelDel;
+
+     
+static void Main(string[] args)
+{
+    // Para atribuir é assim
+    // Perceba que aqui voce apenas passa a função nao chama ela
+    variavelDel = ataque;
+
+
+    //A maior vantagem é que voce pode declarar varias funçoes na mesma variavel fazendo com que ela execute varias funções ao mesmo tempo
+
+    variavelDel += pular;
+
+
+    // Para remover uma função basta usar 
+
+    variavelDel-=pular;
+}
+
+void ataque(){
+
+}
+
+// E somente usando delegate voce pode passar uma função como parametro
+// Entretanto a função abaixo ira dar erro pois voce declarou o exemploDel com uma assinatura de sem paramaetros
+// E como você passou param para algo que não aceita ira dar erro
+void pular(exemploDel metodo){
+    
+}
+
+void defesa(){
+    
+}
+
+```
+
+## Events
+- Serve para notificar alguma classe que alguma ação aconteceu 
+
+```c#
+// Classe personagem
+
+public class player:MonoBehaviour{
+    private void Start(){
+
+        Vilão.OnEnemyDied+=Comemorar;
+    }
+
+    private void Comemorar(){
+        Debug.Log("Comemorar")
+    }
+}
+
+
+```
+
+```c#
+// Classe vilão
+
+public class Vilão:MonoBehaviour{
+    // Para usar eventos é necessario o uso de delegates 
+    public delegate void EnemyDeath();
+
+
+     // Usando o public static event, você inicia a criação de um evento que pode ser acessado por otras classes
+     // é necessario associar ao delegate o tipo do delegate 
+     // Depois Para criar o nome do evento por convenção é colocado o ON primeiro e usado o nome no pasado
+    public static event EnemyDeath OnEnemyDied; 
+
+    public enemyLife = 10;
+
+    void Update{
+        if(enemyLife == 0){
+            if(OnEnemyDied != null){
+                OnEnemyDied();
+            }
+            
+        }
+    }
+}
+
+```
