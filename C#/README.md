@@ -836,6 +836,50 @@ public class Vilão:MonoBehaviour{
             
         }
     }
+
+
+```
+## Involke 
+
+- Serve para poder invocar metodos apos um intervalo de tempo 
+- Vantagens
+    - Ele é bastante simples de usar 
+- Desvantagem 
+    - Não funciona muito bem quando usado em larga escala pos gasta muita memoria
+```c#
+
+void Start(){
+
+    //Involke("Nome da função", segundos de espera pra executar)
+    Involke("Like",5);
 }
+void Like(){
+    Debug.Log("Teste");
+}
+
+```
+
+## Propriedades, Get e Set
+
+- Servem para acessar ou mudar dados, variaveis privads dentro de classes 
+```c#
+
+public class Exemplo{
+    private int numero = 10;
+    publc int Numero{
+        //Dessa forma eu consigo somente VER a variavel o valor no caso 
+        get { return numero };
+    }
+
+    publc void SetNumero{
+        //Dessa forma eu consigo somente gravar um valor na variavel
+        // O value é o que ele vai receber quando for chamado em outra classe
+        // obj = Exemplo.SetNumero = 10;
+        set { numero = value };
+    }
+
+
+}
+
 
 ```
