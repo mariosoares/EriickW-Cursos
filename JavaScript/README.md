@@ -826,6 +826,9 @@ let bin=num.toString(2)
 let oct=num.toString(8)
 let hex=num.toString(16)
 
+// mas caso eu queira converter alguma base por exemplo binaria se faz assim:
+//parseInt(string que é um numero, radix) o radix é um argumento que especifica base do numero
+const a = parseInt("11",2)
 
 // Camando .trim() ele vai apagar espaços antes e depois
 let frase= "          Olá mundo !!    "
@@ -1666,6 +1669,8 @@ const body = document.querySelector("body")
 // Coloca após o a tag do html
 body.append(div)
 
+// Coloca dentro da tag body
+body.appendChild(div)
 
 // o prepend serve tambem para adicionar
 // Coloca o elemento antes de qualquer outra 

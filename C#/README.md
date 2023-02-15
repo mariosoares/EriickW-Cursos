@@ -431,7 +431,7 @@ void Start(){
 
 class Vampiro{
     public forca;
-// Para criar um contrutor você presia crialo dentro da classe
+// Para criar um contrutor você presia crialo dentro da classe e com mesmo nome da classe 
     public Vampiro(int forca1){
         forca = forca1;
     }
@@ -440,6 +440,20 @@ class Vampiro{
 // E quando for instanciar um objeto com a classe basta passar os atributos nos parentes
 
 Vampiro Dracula = new Vampiro(forca1);
+
+```
+## Método Destrutores
+- É chamado quando o objeto que foi instanciado é destruido 
+- A destruição o corre quando ele ja é utilizado e o programa precisa liberar espaço automaticamente 
+
+```c#
+
+//Para criar um metodo destrutor ele precisa ter o memsmo nome da classe 
+// E antes do nome ele precisa ter um "~"
+~Jogador(){
+     
+}
+
 
 ```
 
@@ -648,6 +662,7 @@ goto pontoInicial
 
 ## Classes e Métodos Abstratos
 - classes abstratas Servem de referencia para outras classes que herdem dessa classe, serve como se fosse um molde
+-Tipo de dado composto de dados, propriedades(variaveis), e metodos(funções),uma classse que serve para instanciar objetos, ela que vai ditar as regras dos objetos, apartir de uma classe você pode instanciar diversos objetose cada objetos são individuos diferentes 
 - metodos abstratos você não consegue fazer uma implementação dele na classe que foi criado, e todo metodo abstrato precisa necessariamente ser implementado na classe herdada
 ```c#
 
@@ -677,6 +692,16 @@ public class Bane:Viloes{
 
 sealed class A{
 
+}
+
+
+``` 
+## Metodos Sealed(metodos selados)
+- Esse tipo de metodo não pode ser redefinido
+```c#
+
+sealed void escrerva(){
+    Console.WriteLine("Ola");
 }
 
 
@@ -866,12 +891,12 @@ void Like(){
 
 public class Exemplo{
     private int numero = 10;
-    publc int Numero{
+    pubilc int Numero{
         //Dessa forma eu consigo somente VER a variavel o valor no caso 
         get { return numero };
     }
 
-    publc void SetNumero{
+    public void SetNumero{
         //Dessa forma eu consigo somente gravar um valor na variavel
         // O value é o que ele vai receber quando for chamado em outra classe
         // obj = Exemplo.SetNumero = 10;
