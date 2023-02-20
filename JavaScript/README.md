@@ -471,7 +471,28 @@ sayMyName(
 
 <br>
 
+## Orientação a Protótipo, Funções Construtoras
+```js
+
+
+const pessoa = {
+    genero: "Masculino"
+}
+
+const erick = {
+    nome : "Erick",
+    idade:19,
+    __proto__: pessoa // Usando o proto você meio que herda do objeto pessoa
+
+}
+
+
+```
+
+
+
 ### ***Funções Construtoras :***
+
 
 ```js
 //Funciona como um objeto usando a palavra chave "new" você cria o objeto, para criar "Caracteristicas" basta usar a palavra chave "this"
@@ -489,6 +510,13 @@ function Person(name){
 
   this.name = name
 } 
+
+//Caso você queira adicionar algo em uma função construtora 
+Person.prototype.falar = function(){
+    console.log(`Meu nome é ${this.name}`)
+}
+
+
 
 const erick = new Person("Erick");
 
@@ -893,6 +921,34 @@ techs.push("node.js")
 techs.forEach(funtion(item, index){
     console.log(item , index)
 })
+
+//Serve para filtar elementos 
+// ele meio que vai criar um novo array no return
+// Ele necessariamente precisa retornar um booleano
+// se for true ele fica na lista
+// se for false ele tira da lista
+
+const novaLista = techs.filter((element,i,listRef)=>{
+    return (element == "html")
+})
+
+// Map serve para converter algum elemento em outro (um objeto em outro mais especificamente)
+
+const lista2 = techs.map((element)=>{
+    return {element}
+})
+
+// Colocando um segundo paarmetro vc indica qual é o primeiro valor
+const lista2 = techs.map((element)=>{
+    return {element}
+},0)
+// Reuce serve para percorrer toda a lista e reduzir ela a um unico valor
+
+
+const concat = techs.reduce((previous,current)=>{
+    return previous+current
+})
+
 
 // Adicionar no começo
 // Funciona da do meio inverso ao do push
