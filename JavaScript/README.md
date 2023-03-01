@@ -1827,7 +1827,7 @@ const loginUserPromises = (email, password) =>{
         resolve({email})
     })
 }
-loginUserPromises("junindomorro@gmail.com","123456").then((user) =>{// O then traduzido significa "então" ou seja depois de ele ver a promisse ele vai executar a função recebendo os valores do "resolve" no caso a arrow func esta recebendo o vaalor do resolve o paramatro "user"
+loginUserPromises("junindomorro@gmail.com","123456").then((user) =>{// O then traduzido significa "então" ou seja depois de ele ver a promisse ele vai executar a função recebendo os valores do "resolve" no caso a arrow func esta recebendo o vaalor do resolve o paramatro "user", caso o resultado da promise for um resolve
     console.log({user})
 }).catch((error) => {//o catch pega o erro que foi dado no reject e passa para o parametro da função callback no caso o "error"
     console.log({error})
