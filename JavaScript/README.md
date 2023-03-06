@@ -487,9 +487,47 @@ const erick = {
 }
 
 
+// Quando um objeto é declarado com const ele não pode ser "receber" um novo objeto
+// Mas você pode alterar suas propriedades o que é meio contraditorio ja que é constante
+
+//Usando o object.freeze você impede que o njeto receba uma alterações em suas propriedades
+
+const pessoaConstante = Object.freeze({nome: "Apolo" })
+
 ```
 
+### **Notação Literal***
+```js
 
+const a = 1,b = 2, c = 3;
+
+
+// Primeira mostra uma forma para atribuir atributos a um objeto
+// da forma convecional
+const obj1 =  {a: a, b: b, c: c}
+
+
+// Essa segunda forma você não precisa declarar o nome do atributo
+// pois o prorpio javascript vai pegar o nome da constante pra ser usada de nome do atributo
+const obj2 = {a,b,c}
+
+
+
+const nomeAttr = "nota"
+const valorAttr = 7.87
+
+const obj3;
+
+//Lembra quando disse que atributos dos objetos podiam ser acessados por colchetes?
+// então qui voce pode criar uma posição usando o valor dentro de uma variavel como texto
+obj3[nomeAttr] = valorAttr
+
+// Tambem para dar valores de variaveis a nome de atributos basta fazer assim
+const obj4 = {
+    [nomeAttr]:valorAttr
+}
+
+```
 
 ### ***Funções Construtoras :***
 
@@ -546,7 +584,50 @@ const mult = function mult(x,y){
 // 
 
 ```
+### Getters/Setters
+```js
 
+const sequencia = {
+    _valor: 1;// Usar o o underline antes de uma propriedade é ima convenção
+    // que diz que esse atributo so vai ser usado dentro do objeto
+
+
+    get valor(){// o get sao funções que os valores são acessados 
+        return this._valor++;
+    }
+
+    set valor(valor){//o set sao funções que os valores são alterados 
+        this._valor = valor
+    }
+}
+
+```
+### Funções Importantes de Objeto
+
+```js
+
+const erick = {
+    nome : "Erick",
+    idade:19,
+}
+
+// Essa função serve para mostrar todas as chaves do objeto
+console.log(Object.keys(erick))
+
+// Mostra todos os values do objeto
+console.log(Object.values(erick))
+
+// mostra as entradas(os valores do obj) em formato de array
+console.log(Object.entries(erick))
+
+// Usado para definir uma prorpiedade, entretanto aqui você pode definir algumas caracteristicas para as prorpiedades
+// Object.defineProperty(objeto a ser adicionado, "nome da prorpiedade" )
+Object.defineProperty(erick, "animeFav"){
+    enumerable: true;// essa vai indicar se ele pode aparecer na listagem
+    writable: false;// Aqui indica se ele pode ser sobrescrito
+    value:"Code Geass" // vc ja pode indicar
+}
+```
 ### Contexto Léxico
 ```JS
 
