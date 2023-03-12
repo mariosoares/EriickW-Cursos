@@ -1,11 +1,12 @@
-function area(largura, altura){
-    const area = largura * altura
-
-    if(area > 20){
-        console.log(`Valor acima do permitido: ${area}m².`)
-
-    }else{
-        return area
-    }
+function area(){
+   this.nome ="Erick"
 }
-console.log(area(2,2))
+
+area.prototype.soma = function(){
+    console.log("ola")
+}
+
+let somar = new area;
+
+
+somar.soma()

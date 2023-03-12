@@ -379,7 +379,7 @@ study
 ### IIFE : Imnmediately Inkoked Function Expression
 
 ``` js
-// Função auto invokavel
+// Função auto invocavel
 (function(){
     console.log("Ola mundo!!")
 })()
@@ -493,6 +493,10 @@ const erick = {
 //Usando o object.freeze você impede que o njeto receba uma alterações em suas propriedades
 
 const pessoaConstante = Object.freeze({nome: "Apolo" })
+
+
+
+
 
 ```
 
@@ -762,7 +766,7 @@ const animal = {
 
 function getSomething(){
     console.log(this.nome);//Mas o this não iria se referir a um objeto ou função pai? Ou seja ele iria se referir a essa função getSomething()?
-}Leviathan Dragon
+}
 
 getSomething.call(pessoa);//Usando metodo .call antes da função você pode especificar qual a obj que será o pai,ou seja colocando o call você pode mostrar qual obj que o this se refira
 ```
@@ -2067,7 +2071,49 @@ const funcoes = require('Caminho da pasta deve ser colocado aqui')// Isso irá r
 ### Protótipos
 - Todos os objetos Javascript herdam propriedades e métodos de um prototype. O Object.prototype esta no topo dessa cadeia
 - É os esqueleto de todo objeto. Ou seja todos os objetos JS vão herdar metodos de um *prototype* que é um prototipo. 
+- **Shadowing**:Shadowing que também é conhecido como escopo de variável. Variáveis que são declaradas em um determinado escopo são sobrescritas se a mesma variável for declarada em um escopo mais restrito, como ocorreu nesse exemplo. Foi declarado a variável escopo num escopo mais abrangente e mais a frente foi declarada outra variável com o mesmo nome porém em um escopo mais restrito. Resultando na prioridade dessa variável declarada nesse escopo mais restrito.
+```js
 
+const carro = {
+    velAtual:0,
+    velMax:200,
+    acelerarMais(){
+        if(this.velAual + delta <= this.velMax){
+            this.velAtual += delta
+        }else{
+            this.velAtual = this.velMax
+        }
+    },
+    status(){
+        return `${this.velAual}`
+    }
+}
+const ferrari = {
+    moedelo:'f40',
+    velMax:324 //Shadowing
+
+    status(){
+        return `${this.modelo}: ${super.status()}`// o Super funciona da mesma forma que o this so que ele se refere ao prototipo , funciona como o Base do c#
+    }
+    
+}
+    Object.setPrototypeOf(ferrari,carro)// serve para que seja estabelecida uma relação de prototipo é como definir uma herança é a mesma coisa de fazer um __proto__ dentro de um objeto
+
+
+    // Mas caso você não queira usar a função acima basta usar Object.create(pai que será herdado)
+
+    const volvo = Object.create(carro)
+
+
+    // Essa função pode receber um outro parametro que é um objeto de vai servir de default e nele você pode 
+
+    const gol = Object.create(carro, {
+        nome: {value:"gol" , writable:false}
+    })
+
+
+    // Object.preventE
+```
 ### Classes e Objetos
 
 ```javaScript
