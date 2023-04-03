@@ -6,10 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node console.js"
+
   },
   "author": "Erick Willian",
   "license": "MIT",
   "dependencies": {
-    "cfonts": "^3.1.1"
+    "axios": "^1.3.4",
+    "cfonts": "^3.1.1",
+    "nodash": "^0.12.0"
   }
 }

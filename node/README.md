@@ -193,3 +193,11 @@ Uma maneira de trabalharmos com tempo dentro do NodeJS
 - Ouvir evnetos 
 - Executar ações para determinados eventos 
 - Entender como ele é base para os outros módulos
+
+## Módulos de Terceiros 
+
+```js
+
+    
+
+```
