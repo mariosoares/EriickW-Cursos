@@ -217,12 +217,57 @@ interface IVehicle{
     brand:string
 
 }
+
+// Quando você implementa uma interface você é obrigado a usar todos os seus atributos
 class Car implements IVehicle{
     brand
     constructor(brand:string){
         this.brand = brand
     }
 }
+
+
+```
+## Herança
+
+```ts
+// Continuando do exemplo de interfaces
+// Já quando você herda isso deixa de ser obrigatorio
+class SuperCar extends Car{
+
+    constructor(brand:string){
+        // Usado o super você pode pegar da classe pai um atributo
+        super(brand)
+    }
+}
+
+```
+
+## Decorator
+- Validação de dados 
+- Observador de 
+
+```ts
+function BaseParameters(){
+    return function<T extends {new (...args: any[]):{}}>(constructor: T){
+        return class extends constuctor {
+            id= Math.ramdom();
+            createdAt = new Date
+        }
+    }
+}
+
+
+@BaseParameters()
+class Person{
+    name
+
+    constructor(name:string){
+        this.name = name
+    }
+}
+const sam = new Person("Sam")
+
 
 
 ```
