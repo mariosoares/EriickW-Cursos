@@ -1462,7 +1462,7 @@ try{
 ```
 
 <br>
-
+.
 ### ***for...of***
 - É um for para arrays e strings 
 - Loop enter estruturas iteráveis ou seja estruturas que possui posições 
