@@ -1898,6 +1898,39 @@ const user = loginUser("junindomorro@gmail.com","123456",(user) =>{
 
 
 ```
+- Consumindo dados em callbacks
+```js
+// Aqui eu estou importando do node os metodos do http
+const http = require('http')
+
+
+const getPokemon = (pokemon,callback) =>{
+    //Aqui eu estou pegando a url da api de pokemons 
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    // O http.get é uma forma de gerar uma requisição para a api passando como params
+    // (a url, eu uma função onde os params dela é o response da requisição que será passado a ela)
+    http.get(url, response =>{
+        let resultado = ""
+
+        //res.on é um escutador de eventos 
+        // res.on("evento", função que pode ou não possuir parametros que serão reebidos)
+        // Nesse caso o data são os dados que estão sendo recebidos pela requisição e são passados para o parametro
+        res.on('data',dados => {
+                resultado+=dados
+            })
+
+        // O end é quando todos os dados foram enviados
+        res.on("end",()=>{
+            callback(JSON.parse(resultado))
+        })  
+
+    })
+}
+getPokemon("pikachu",(pokemon)=>{
+    console.log(pokemon)
+})
+
+```
 ```javascript
 // Promises
 
@@ -1918,7 +1951,43 @@ loginUserPromises("junindomorro@gmail.com","123456").then((user) =>{// O then tr
     console.log({error})
 });
 ```
+- O mesmo exemplo do de callback 
+```js
+// Aqui eu estou importando do node os metodos do http
+const http = require('http')
 
+
+const getPokemon = pokemon =>{
+
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+
+
+    return new Promise((resolve,reject)=>{
+            http.get(url, response =>{
+            let resultado = ""
+
+            res.on('data',dados => {
+                    resultado+=dados
+                })
+
+
+            res.on("end",()=>{
+                try{
+                    resolve(JSON.parse(resultado))
+                }catch(e){
+                    reject(e)
+                }
+            })  
+
+        })
+    })
+
+}
+
+// Esse Promisse.all serve para juntar varias promisses e quando todas tiverem sido completadas ele passa para o then
+Promisse.all([getPokemon("pikachu")]).then( pokemon => console.log(pokemon))
+
+```
 ```javascript
 // Promises exemplo mais complexo
 
@@ -2241,4 +2310,28 @@ contador(0,10)
 ```
 
 
+```
+
+### Set 
+- Estrutura não indexada que não premite repetição
+- É tipo um array mais não pode acessar os dados pelos seus indices
+
+```js
+const times = new Set()
+
+// Para adicionar
+times.add("Vasco")
+times.add("São Paulo").add("Palmeiras")
+
+//Paramostrar quantos elementos tem
+console.lg(times.size)
+
+// Para mostrar se existe, e dentro dos parenteses fica o que você procura
+console.lg(times.has("Vasco"))
+
+// Para apagar
+times.delete("Flamengo")
+
+const nomes = ["Erick","Pedro","Raquel"]
+const nomesSet = new Set(nomes)
 ```

@@ -1,1 +1,0 @@
-let conta = document
