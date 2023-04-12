@@ -1462,7 +1462,7 @@ try{
 ```
 
 <br>
-.
+
 ### ***for...of***
 - É um for para arrays e strings 
 - Loop enter estruturas iteráveis ou seja estruturas que possui posições 
@@ -1954,7 +1954,7 @@ loginUserPromises("junindomorro@gmail.com","123456").then((user) =>{// O then tr
 - O mesmo exemplo do de callback 
 ```js
 // Aqui eu estou importando do node os metodos do http
-const http = require('http')
+const https = require('https')
 
 
 const getPokemon = pokemon =>{
@@ -1963,15 +1963,15 @@ const getPokemon = pokemon =>{
 
 
     return new Promise((resolve,reject)=>{
-            http.get(url, response =>{
+            https.get(url, response =>{
             let resultado = ""
 
-            res.on('data',dados => {
-                    resultado+=dados
-                })
+            response.on('data',dados => {
+                resultado+=dados
+            })
 
 
-            res.on("end",()=>{
+            response.on("end",()=>{
                 try{
                     resolve(JSON.parse(resultado))
                 }catch(e){
@@ -2067,6 +2067,59 @@ const displayUser = async () =>{
 }
 dispayUser();
 
+```
+
+
+- Mesmo exemplo dos outros
+```js
+const https = require('https')
+
+
+const getPokemon = pokemon =>{
+
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+
+
+    return new Promise((resolve,reject)=>{
+            https.get(url, response =>{
+            let resultado = ""
+
+            response.on('data',dados => {
+                resultado+=dados
+            })
+
+
+            response.on("end",()=>{
+                try{
+                    resolve(JSON.parse(resultado))
+                }catch(e){
+                    reject(e)
+                }
+            })  
+
+        })
+    })
+
+}
+
+//Recurso do ES8
+// Objetivo de simplificar o uso de promises
+// É de extrema importancia que a palavra "await" so irá funcionar dentro de uma função com async
+// Sempre quando estiver lidando com funções que retornam promises
+// você pode colocar o await para que so passe para a proxima linha de código quando a pormisse retornar um resultado
+let obterPokemon = async ()=>{
+    // Aqui ao invés de usar o then e criar uma cadeia de tehns você so armazena o resultado da promisse a constante
+    const pokemon = await getPokemon("pikachu")
+
+    return pokemon
+
+    // Lembrando funções async não retorna o objeto em si
+    // ela retorna ua AsyncFunction que pode ser tratada com o then
+}
+
+obterPokemon().then(pokemon =>{
+    console.log(pokemon)
+})
 ```
 
 ## Utiliando Módulos
