@@ -231,3 +231,29 @@ AvanProps.defaultProps = {
 - Com ele conseguimos manusear o estado de um componente de forma simples 
 - Este hook funciona muito bem com eventos 
 - Podemos atrelar um evento a mudança de state
+- O hooks useState funciona da segunte forma você vai fazer a segunte linha `let  [cont , aumentar] = useState(1);` onde você vai fazer uma atribuição por desestruturação onde a primeira vai ser a variavel que vai ter o valor e a segunda é uma função que vai atualizar a variavel
+- O react vai ficar de olho na função quando ela atualizar a variavel, e quando isso acontecer o react vai atualizar na interface(se a variavel estiver sendo usada na interface)
+```js
+import { useState } from "react"
+
+export default function Estados(){
+    let [cont , aumentar] = useState(1);
+
+    function aumentarValor(){
+        aumentar(cont+1);
+    }
+    return (
+        <>
+            <button onClick={aumentarValor}>Clique</button>
+
+            <p>{cont}</p>
+        </>
+    )
+}
+
+```
+## Métodos por props
+- Os métodos tembém podem ser acessados por props
+- Ou seja, um componente filho pode ativar o métodos do seu ancstral
+- Vamos acessar o método por meio de um evento
+- A sintaxe é a mesma de uma porps de dados.meuEvento
